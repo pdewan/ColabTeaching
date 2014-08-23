@@ -1,0 +1,91 @@
+I***Tracer: showInfo = true
+Please enter an input line or quit or history
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(CathyP2PIMOutput) Output(Please enter an input line or quit or history)
+I***EvtType(util.trace.session.ReceivedMessageDistributedToListeners) EvtSrc(util.session.AnUmarshalledReceivedMessageDispatcherAndSessionStateManager)  Thread(Message Receiver) Process(Cathy) Msg([2; [Bob]Bob1]) Address(Bob)
+I***EvtType(trace.im.ListEditReceived) EvtSrc(im.AHistoryInCoupler)  Thread(Message Receiver) Process(Cathy)ListEdit_ADD(2, [Bob]Bob1, Instant Messaging) Address(Bob)
+I***EvtType(trace.echo.modular.ListEditMade) EvtSrc(im.AReplicatedHistory)  Thread(Message Receiver) ListEdit_ADD(0,[Bob]Bob1,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(im.AReplicatedHistory)  Thread(Message Receiver) ListEdit_ADD(0,[Bob]Bob1,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(im.AnIMInteractor)  Thread(Message Receiver) ListEdit_ADD(0,[Bob]Bob1,Instant Messaging)
+[Bob]Bob1
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(CathyP2PIMOutput) Output([Bob]Bob1)
+I***EvtType(util.trace.session.ReceivedMessageDistributedToListeners) EvtSrc(util.session.AnUmarshalledReceivedMessageDispatcherAndSessionStateManager)  Thread(Message Receiver) Process(Cathy) Msg([3; [Bob]But I have promises to keep]) Address(Bob)
+I***EvtType(trace.im.ListEditReceived) EvtSrc(im.AHistoryInCoupler)  Thread(Message Receiver) Process(Cathy)ListEdit_ADD(3, [Bob]But I have promises to keep, Instant Messaging) Address(Bob)
+I***EvtType(trace.echo.modular.ListEditMade) EvtSrc(im.AReplicatedHistory)  Thread(Message Receiver) ListEdit_ADD(1,[Bob]But I have promises to keep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(im.AReplicatedHistory)  Thread(Message Receiver) ListEdit_ADD(1,[Bob]But I have promises to keep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(im.AnIMInteractor)  Thread(Message Receiver) ListEdit_ADD(1,[Bob]But I have promises to keep,Instant Messaging)
+[Bob]But I have promises to keep
+$ Cathy2
+I***EvtType(util.trace.console.ConsoleInput)  Thread(CathyP2PIMOutput) Input(Cathy2)
+$ And miles to go before I sleep
+I***EvtType(util.trace.console.ConsoleInput)  Thread(CathyP2PIMOutput) Input(And miles to go before I sleep)
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(CathyP2PIMOutput) Output([Bob]But I have promises to keep)
+I***EvtType(trace.echo.modular.ListEditInput) EvtSrc(im.AnIMInteractor)  Thread(main) ListEdit_ADD(2,[Cathy]Cathy2,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditMade) EvtSrc(im.AReplicatedHistory)  Thread(main) ListEdit_ADD(2,[Cathy]Cathy2,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(im.AReplicatedHistory)  Thread(main) ListEdit_ADD(2,[Cathy]Cathy2,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(im.AnIMInteractor)  Thread(main) ListEdit_ADD(2,[Cathy]Cathy2,Instant Messaging)
+[Cathy]Cathy2
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(CathyP2PIMOutput) Output([Cathy]Cathy2)
+I***EvtType(trace.im.ListEditSent) EvtSrc(im.AReplicatedHistory)  Thread(main) Process(Cathy)ListEdit_ADD(2, [Cathy]Cathy2, Instant Messaging) Address(others)
+I***EvtType(util.trace.session.SendDataRequest) EvtSrc(util.session.ADirectCommunicator)  Thread(main) Process(Cathy) Msg([2; [Cathy]Cathy2]) Address(others) Delivery(Direct)
+I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(im.AReplicatedHistory)  Thread(main) ListEdit_ADD(2,[Cathy]Cathy2,Instant Messaging)
+Please enter an input line or quit or history
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(CathyP2PIMOutput) Output(Please enter an input line or quit or history)
+I***EvtType(trace.echo.modular.ListEditInput) EvtSrc(im.AnIMInteractor)  Thread(main) ListEdit_ADD(3,[Cathy]And miles to go before I sleep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditMade) EvtSrc(im.AReplicatedHistory)  Thread(main) ListEdit_ADD(3,[Cathy]And miles to go before I sleep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(im.AReplicatedHistory)  Thread(main) ListEdit_ADD(3,[Cathy]And miles to go before I sleep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(im.AnIMInteractor)  Thread(main) ListEdit_ADD(3,[Cathy]And miles to go before I sleep,Instant Messaging)
+[Cathy]And miles to go before I sleep
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(CathyP2PIMOutput) Output([Cathy]And miles to go before I sleep)
+I***EvtType(trace.im.ListEditSent) EvtSrc(im.AReplicatedHistory)  Thread(main) Process(Cathy)ListEdit_ADD(3, [Cathy]And miles to go before I sleep, Instant Messaging) Address(others)
+I***EvtType(util.trace.session.SendDataRequest) EvtSrc(util.session.ADirectCommunicator)  Thread(main) Process(Cathy) Msg([3; [Cathy]And miles to go before I sleep]) Address(others) Delivery(Direct)
+I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(im.AReplicatedHistory)  Thread(main) ListEdit_ADD(3,[Cathy]And miles to go before I sleep,Instant Messaging)
+Please enter an input line or quit or history
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(CathyP2PIMOutput) Output(Please enter an input line or quit or history)
+I***EvtType(util.trace.session.ReceivedMessageDistributedToListeners) EvtSrc(util.session.AnUmarshalledReceivedMessageDispatcherAndSessionStateManager)  Thread(Message Receiver) Process(Cathy) Msg([8; [Bob]Bob4]) Address(Bob)
+I***EvtType(trace.im.ListEditReceived) EvtSrc(im.AHistoryInCoupler)  Thread(Message Receiver) Process(Cathy)ListEdit_ADD(8, [Bob]Bob4, Instant Messaging) Address(Bob)
+I***EvtType(trace.echo.modular.ListEditMade) EvtSrc(im.AReplicatedHistory)  Thread(Message Receiver) ListEdit_ADD(4,[Bob]Bob4,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(im.AReplicatedHistory)  Thread(Message Receiver) ListEdit_ADD(4,[Bob]Bob4,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(im.AnIMInteractor)  Thread(Message Receiver) ListEdit_ADD(4,[Bob]Bob4,Instant Messaging)
+[Bob]Bob4
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(CathyP2PIMOutput) Output([Bob]Bob4)
+I***EvtType(util.trace.session.ReceivedMessageDistributedToListeners) EvtSrc(util.session.AnUmarshalledReceivedMessageDispatcherAndSessionStateManager)  Thread(Message Receiver) Process(Cathy) Msg([9; [Bob]But I have promises to keep]) Address(Bob)
+I***EvtType(trace.im.ListEditReceived) EvtSrc(im.AHistoryInCoupler)  Thread(Message Receiver) Process(Cathy)ListEdit_ADD(9, [Bob]But I have promises to keep, Instant Messaging) Address(Bob)
+I***EvtType(trace.echo.modular.ListEditMade) EvtSrc(im.AReplicatedHistory)  Thread(Message Receiver) ListEdit_ADD(5,[Bob]But I have promises to keep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(im.AReplicatedHistory)  Thread(Message Receiver) ListEdit_ADD(5,[Bob]But I have promises to keep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(im.AnIMInteractor)  Thread(Message Receiver) ListEdit_ADD(5,[Bob]But I have promises to keep,Instant Messaging)
+[Bob]But I have promises to keep
+$ Cathy5
+I***EvtType(util.trace.console.ConsoleInput)  Thread(CathyP2PIMOutput) Input(Cathy5)
+$ And miles to go before I sleep
+I***EvtType(util.trace.console.ConsoleInput)  Thread(CathyP2PIMOutput) Input(And miles to go before I sleep)
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(CathyP2PIMOutput) Output([Bob]But I have promises to keep)
+I***EvtType(trace.echo.modular.ListEditInput) EvtSrc(im.AnIMInteractor)  Thread(main) ListEdit_ADD(6,[Cathy]Cathy5,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditMade) EvtSrc(im.AReplicatedHistory)  Thread(main) ListEdit_ADD(6,[Cathy]Cathy5,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(im.AReplicatedHistory)  Thread(main) ListEdit_ADD(6,[Cathy]Cathy5,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(im.AnIMInteractor)  Thread(main) ListEdit_ADD(6,[Cathy]Cathy5,Instant Messaging)
+[Cathy]Cathy5
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(CathyP2PIMOutput) Output([Cathy]Cathy5)
+I***EvtType(trace.im.ListEditSent) EvtSrc(im.AReplicatedHistory)  Thread(main) Process(Cathy)ListEdit_ADD(6, [Cathy]Cathy5, Instant Messaging) Address(others)
+I***EvtType(util.trace.session.SendDataRequest) EvtSrc(util.session.ADirectCommunicator)  Thread(main) Process(Cathy) Msg([6; [Cathy]Cathy5]) Address(others) Delivery(Direct)
+I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(im.AReplicatedHistory)  Thread(main) ListEdit_ADD(6,[Cathy]Cathy5,Instant Messaging)
+Please enter an input line or quit or history
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(CathyP2PIMOutput) Output(Please enter an input line or quit or history)
+I***EvtType(trace.echo.modular.ListEditInput) EvtSrc(im.AnIMInteractor)  Thread(main) ListEdit_ADD(7,[Cathy]And miles to go before I sleep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditMade) EvtSrc(im.AReplicatedHistory)  Thread(main) ListEdit_ADD(7,[Cathy]And miles to go before I sleep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(im.AReplicatedHistory)  Thread(main) ListEdit_ADD(7,[Cathy]And miles to go before I sleep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(im.AnIMInteractor)  Thread(main) ListEdit_ADD(7,[Cathy]And miles to go before I sleep,Instant Messaging)
+[Cathy]And miles to go before I sleep
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(CathyP2PIMOutput) Output([Cathy]And miles to go before I sleep)
+I***EvtType(trace.im.ListEditSent) EvtSrc(im.AReplicatedHistory)  Thread(main) Process(Cathy)ListEdit_ADD(7, [Cathy]And miles to go before I sleep, Instant Messaging) Address(others)
+I***EvtType(util.trace.session.SendDataRequest) EvtSrc(util.session.ADirectCommunicator)  Thread(main) Process(Cathy) Msg([7; [Cathy]And miles to go before I sleep]) Address(others) Delivery(Direct)
+I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(im.AReplicatedHistory)  Thread(main) ListEdit_ADD(7,[Cathy]And miles to go before I sleep,Instant Messaging)
+Please enter an input line or quit or history
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(CathyP2PIMOutput) Output(Please enter an input line or quit or history)
+$ history
+I***EvtType(util.trace.console.ConsoleInput)  Thread(BobP2PIMOutput) Input(history)
+[Bob]Bob1, [Bob]But I have promises to keep, [Cathy]Cathy2, [Cathy]And miles to go before I sleep, [Bob]Bob4, [Bob]But I have promises to keep, [Cathy]Cathy5, [Cathy]And miles to go before I sleep
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(CathyP2PIMOutput) Output([Bob]Bob1, [Bob]But I have promises to keep, [Cathy]Cathy2, [Cathy]And miles to go before I sleep, [Bob]Bob4, [Bob]But I have promises to keep, [Cathy]Cathy5, [Cathy]And miles to go before I sleep)
+
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(CathyP2PIMOutput) Output()
+Please enter an input line or quit or history
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(CathyP2PIMOutput) Output(Please enter an input line or quit or history)

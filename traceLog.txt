@@ -1,0 +1,8 @@
+Tracer: showInfo = true
+Please enter an input line or quit or history
+the woods
+I***EvtType(trace.echo.ListEditInput) EvtType(AnEchoerInteractor)  Time(1401992424365, 14:20:24) Thread(main)ADD(0,the woods)
+I***EvtType(trace.echo.ListEditNotified) EvtType(AHistory)  Time(1401992424438, 14:20:24) Thread(main)ADD(0,the woods)
+I***EvtType(trace.echo.ListEditObserved) EvtType(AnEchoerInteractor)  Time(1401992424438, 14:20:24) Thread(main)ADD(0,the woods)
+the woods(Echo)
+Please enter an input line or quit or history

@@ -1,0 +1,33 @@
+I***Tracer: showInfo = true
+Please enter an input line or quit or history
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(Echoer ComposerOutput) Output(Please enter an input line or quit or history)
+$ The woods are lovely dark and deep
+I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(The woods are lovely dark and deep)
+I***EvtType(trace.echo.modular.ListEditInput) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(0,The woods are lovely dark and deep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditMade) EvtSrc(echo.modular.AHistory)  Thread(main) ListEdit_ADD(0,The woods are lovely dark and deep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(echo.modular.AHistory)  Thread(main) ListEdit_ADD(0,The woods are lovely dark and deep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(0,The woods are lovely dark and deep,Instant Messaging)
+The woods are lovely dark and deep[Echo]
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(Echoer ComposerOutput) Output(The woods are lovely dark and deep[Echo])
+Please enter an input line or quit or history
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(Echoer ComposerOutput) Output(Please enter an input line or quit or history)
+$ But I have promises to keep
+I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(But I have promises to keep)
+I***EvtType(trace.echo.modular.ListEditInput) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(1,But I have promises to keep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditMade) EvtSrc(echo.modular.AHistory)  Thread(main) ListEdit_ADD(1,But I have promises to keep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(echo.modular.AHistory)  Thread(main) ListEdit_ADD(1,But I have promises to keep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(1,But I have promises to keep,Instant Messaging)
+But I have promises to keep[Echo]
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(Echoer ComposerOutput) Output(But I have promises to keep[Echo])
+Please enter an input line or quit or history
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(Echoer ComposerOutput) Output(Please enter an input line or quit or history)
+$ And miles to go before I sleep
+I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(And miles to go before I sleep)
+I***EvtType(trace.echo.modular.ListEditInput) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(2,And miles to go before I sleep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditMade) EvtSrc(echo.modular.AHistory)  Thread(main) ListEdit_ADD(2,And miles to go before I sleep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(echo.modular.AHistory)  Thread(main) ListEdit_ADD(2,And miles to go before I sleep,Instant Messaging)
+I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(2,And miles to go before I sleep,Instant Messaging)
+And miles to go before I sleep[Echo]
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(Echoer ComposerOutput) Output(And miles to go before I sleep[Echo])
+Please enter an input line or quit or history
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(Echoer ComposerOutput) Output(Please enter an input line or quit or history)
