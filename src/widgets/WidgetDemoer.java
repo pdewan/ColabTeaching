@@ -20,8 +20,11 @@ import javax.swing.JTextField;
 
 import util.awt.AnExtendibleAWTEventQueue;
 import util.awt.AGlassPaneRedispatcher;
+import util.awt.AnExtendibleTelePointerGlassPane;
 
-public class WidgetTesterLauncher {
+public class WidgetDemoer {
+	public static final String JTEXTFIELD_NAME = "Demo JText";
+	public static final String TEXTFIELD_NAME = "Demo Text";
 	public static void main(String[] args) {
 		AnExtendibleAWTEventQueue.useAsEventQueue();
 
@@ -29,18 +32,17 @@ public class WidgetTesterLauncher {
 		createFrameWithWidgets("frame 2");
 	}
 	public static JFrame createFrameWithWidgets(String theTitle) {
-//		Frame frame = new Frame(theTitle);
-//		Frame frame = new ATelePointerFrame(theTitle);
+
 		JFrame frame = new JFrame(theTitle);
-
-//		Frame frame = new ADelegateFrame(theTitle);
-		
-//		frame.setContentPane(glassPane);
 		frame.setLayout(new GridLayout(5, 2));
-
 		JTextField jTextField = new JTextField("JTextField: Edit me");
+		AJTextFieldListener jTextFieldListener = new AJTextFieldListener(jTextField);
+		jTextField.addActionListener(jTextFieldListener);
+		jTextField.getDocument().addDocumentListener(jTextFieldListener);
+		jTextField.setName(JTEXTFIELD_NAME);
 		JSlider slider = new JSlider();
 		TextField textField = new TextField("Text Field: Edit me");
+		textField.setName(TEXTFIELD_NAME);
 		Checkbox checkBox = new Checkbox(); // auto scrolled by OS with no events sent
 		JCheckBox jCheckBox = new JCheckBox();
 		Button button = new Button("Button: Press me");
@@ -51,13 +53,8 @@ public class WidgetTesterLauncher {
 		JComboBox jComboBox = new JComboBox(choices);
 		JScrollPane jTextAreaScrollPane = new JScrollPane();
 		jTextAreaScrollPane.setViewportView(jTextArea);
-
-
-//		TextField textField = new ProcessingEventTextField("Edit me");
-
 		frame.add(jTextField);
 		frame.add(textField);
-//		frame.add(jTextArea);
 		frame.add(jTextAreaScrollPane);
 		frame.add(textArea);
 		frame.add(jButton);
@@ -66,13 +63,11 @@ public class WidgetTesterLauncher {
 		frame.add(jCheckBox);
 		frame.add(slider);
 		frame.add(jComboBox);
-//		frame.add(textField4);
-//		new ACharacterDrawer(frame);
 		frame.setSize(300, 300);
 		frame.setVisible(true);
 		// to be commented in later
 //		
-//		JComponent glassPane = new ATelePointerGlassPane(frame);
+//		JComponent glassPane = new AnExtendibleTelePointerGlassPane(frame);
 //
 //		AGlassPaneRedispatcher redispatcher = new AGlassPaneRedispatcher(glassPane, frame);
 //		frame.setGlassPane(glassPane);

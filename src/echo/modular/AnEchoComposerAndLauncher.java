@@ -52,9 +52,9 @@ public class AnEchoComposerAndLauncher implements EchoerComposerAndLauncher{
 		return interactor;
 	}
 	public static void main (String[] args) {
-//		System.out.println("setting traces");
-//		Tracer.showInfo(true);
 		EchoTracerSetter.traceEchoer();
+		// comment out if testing
+		Tracer.showInfo(false); 
 		(new AnEchoComposerAndLauncher()).composeAndLaunch(args);		
 	}
 }

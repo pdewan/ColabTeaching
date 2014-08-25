@@ -43,7 +43,6 @@ public class AnEchoInteractor implements EchoerInteractor {
 	}
 	protected void displayOutput(String newValue) {
 		System.out.println(newValue);
-
 	}
 	
 	protected String computeFeedback(String anInput) {
