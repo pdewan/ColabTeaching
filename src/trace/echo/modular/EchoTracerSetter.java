@@ -1,5 +1,7 @@
 package trace.echo.modular;
 
+import trace.echo.ListEditInput;
+import trace.echo.ListEditMade;
 import util.trace.ImplicitKeywordKind;
 import util.trace.MessagePrefixKind;
 import util.trace.Traceable;

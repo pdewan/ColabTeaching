@@ -1,5 +1,5 @@
 package trace.im;
-import trace.echo.modular.ListEditInfo;
+import trace.echo.ListEditInfo;
 import trace.echo.modular.OperationName;
 import util.trace.session.AddressedMessageInfo;
 import util.trace.session.ProcessInfo;

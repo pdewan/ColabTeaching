@@ -1,4 +1,6 @@
-package trace.echo.modular;
+package trace.echo;
+
+import trace.echo.modular.OperationName;
 
 
 public class ListEditMade extends ListEditInfo{

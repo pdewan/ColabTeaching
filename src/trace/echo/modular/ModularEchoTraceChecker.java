@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import trace.echo.ListEditInfo;
+import trace.echo.ListEditInput;
+import trace.echo.ListEditMade;
 import util.trace.Traceable;
 import util.trace.TraceableLog;
 import bus.uigen.oadapters.ObjectAdapter;

@@ -2,9 +2,11 @@ package echo.monolithic;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import static echo.monolithic.EchoUtilities.*;
 
-import trace.echo.modular.ListEditInput;
+import static echo.monolithic.EchoUtilities.*;
+import trace.echo.ListEditDisplayed;
+import trace.echo.ListEditInput;
+import trace.echo.ListEditMade;
 import trace.echo.modular.ListEditObserved;
 import trace.echo.modular.OperationName;
 import util.annotations.Tags;
@@ -36,9 +38,14 @@ public class MonolithicEchoer  {
 		history.add(history.size(), newValue);
 	}
 	protected static void processInput(String anInput) {
+		ListEditInput.newCase(OperationName.ADD, history.size(), anInput, ApplicationTags.HISTORY, MonolithicEchoer.class);
 		String aFeedback = EchoUtilities.echo(anInput);
 		addToHistory(aFeedback);
+		ListEditMade.newCase(OperationName.ADD, history.size(), anInput, ApplicationTags.HISTORY, MonolithicEchoer.class);
+
 		displayOutput(aFeedback);
+		ListEditDisplayed.newCase(OperationName.ADD, history.size(), anInput, ApplicationTags.HISTORY, MonolithicEchoer.class);
+
 
 	}
 	protected static void processQuit() {

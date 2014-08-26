@@ -3,7 +3,7 @@ package echo.modular;
 import java.util.ArrayList;
 import java.util.List;
 
-import trace.echo.modular.ListEditMade;
+import trace.echo.ListEditMade;
 import trace.echo.modular.ListEditNotified;
 import trace.echo.modular.OperationName;
 import util.annotations.Tags;

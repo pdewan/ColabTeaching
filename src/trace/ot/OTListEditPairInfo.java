@@ -1,6 +1,6 @@
 package trace.ot;
 
-import trace.echo.modular.ListEditInfo;
+import trace.echo.ListEditInfo;
 import trace.echo.modular.OperationName;
 import util.trace.Traceable;
 import util.trace.TraceableInfo;

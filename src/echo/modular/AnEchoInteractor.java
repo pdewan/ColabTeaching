@@ -7,7 +7,8 @@ import java.util.Scanner;
 
 import echo.monolithic.EchoUtilities;
 import echo.monolithic.MonolithicEchoer;
-import trace.echo.modular.ListEditInput;
+import trace.echo.ListEditDisplayed;
+import trace.echo.ListEditInput;
 import trace.echo.modular.ListEditObserved;
 import trace.echo.modular.OperationName;
 import util.annotations.Tags;
@@ -66,6 +67,8 @@ public class AnEchoInteractor implements EchoerInteractor {
 	public void elementAdded(int anIndex, Object aNewValue) {
 		ListEditObserved.newCase(OperationName.ADD, anIndex, aNewValue, ApplicationTags.IM, this);
 		displayOutput(history.get(anIndex));
+		ListEditDisplayed.newCase(OperationName.ADD, anIndex, aNewValue, ApplicationTags.IM, this);
+
 	}
 	public static List<String> toList(SimpleList<String> aHistory) {
 		List<String> retVal = new ArrayList();

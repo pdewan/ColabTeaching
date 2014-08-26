@@ -2,7 +2,7 @@ package im;
 
 import java.io.Serializable;
 
-import trace.echo.modular.ListEditInfo;
+import trace.echo.ListEditInfo;
 import trace.echo.modular.OperationName;
 
 public interface ListEdit<ElementType> extends Serializable {	

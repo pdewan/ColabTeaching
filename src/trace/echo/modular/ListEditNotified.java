@@ -1,5 +1,7 @@
 package trace.echo.modular;
 
+import trace.echo.ListEditInfo;
+
 
 public class ListEditNotified extends ListEditInfo{
 

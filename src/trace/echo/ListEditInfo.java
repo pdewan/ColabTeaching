@@ -1,7 +1,8 @@
-package trace.echo.modular;
+package trace.echo;
 import java.util.Arrays;
 import java.util.List;
 
+import trace.echo.modular.OperationName;
 import util.trace.Traceable;
 import util.trace.TraceableInfo;
 public class ListEditInfo extends TraceableInfo {

@@ -1,6 +1,6 @@
 package im;
 
-import trace.echo.modular.ListEditInfo;
+import trace.echo.ListEditInfo;
 import trace.echo.modular.OperationName;
 
 public class AListEdit<ElementType> implements ListEdit<ElementType>{

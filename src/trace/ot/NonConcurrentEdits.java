@@ -1,6 +1,6 @@
 package trace.ot;
 
-import trace.echo.modular.ListEditInfo;
+import trace.echo.ListEditInfo;
 
 public class NonConcurrentEdits extends OTListEditPairInfo{
 
