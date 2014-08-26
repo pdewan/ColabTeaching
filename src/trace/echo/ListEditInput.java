@@ -4,7 +4,6 @@ import trace.echo.modular.OperationName;
 
 
 public class ListEditInput extends ListEditInfo{
-
 	public ListEditInput(String aMessage, OperationName anOperationName, int anIndex,
 			Object anElement, String aList, Object aFinder) {
 		super(aMessage, anOperationName, anIndex, anElement, aList, aFinder);

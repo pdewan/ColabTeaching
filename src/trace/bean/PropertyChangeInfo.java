@@ -1,4 +1,4 @@
-package trace.echo.modular;
+package trace.bean;
 import java.util.Arrays;
 import java.util.List;
 

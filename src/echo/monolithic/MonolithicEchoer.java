@@ -30,23 +30,22 @@ public class MonolithicEchoer  {
 		}
 	}
 	protected static void displayOutput(String newValue) {
-//		System.out.println(EchoUtilities.echo(newValue));
 		System.out.println(newValue);
-
 	}
 	protected  static void addToHistory(String newValue) {
 		history.add(history.size(), newValue);
 	}
 	protected static void processInput(String anInput) {
-		ListEditInput.newCase(OperationName.ADD, history.size(), anInput, ApplicationTags.HISTORY, MonolithicEchoer.class);
+		System.out.println("received input");
+		// received input
+		ListEditInput.newCase(OperationName.ADD, history.size(), anInput, ApplicationTags.HISTORY, MonolithicEchoer.class);		
 		String aFeedback = EchoUtilities.echo(anInput);
 		addToHistory(aFeedback);
-		ListEditMade.newCase(OperationName.ADD, history.size(), anInput, ApplicationTags.HISTORY, MonolithicEchoer.class);
-
+		// added input to history
+		ListEditMade.newCase(OperationName.ADD, history.size(), anInput, ApplicationTags.HISTORY, MonolithicEchoer.class);		
 		displayOutput(aFeedback);
+		// displayed the input
 		ListEditDisplayed.newCase(OperationName.ADD, history.size(), anInput, ApplicationTags.HISTORY, MonolithicEchoer.class);
-
-
 	}
 	protected static void processQuit() {
 		System.out.println("Quitting application");
