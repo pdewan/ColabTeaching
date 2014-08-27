@@ -11,12 +11,11 @@ import util.trace.Tracer;
 public class TracingLaunchEventClass {
 	public static void main (String[] args) {
 		Tracer.showInfo(true);
-		Tracer.setImplicitDisplayKeywordKind(ImplicitKeywordKind.OBJECT_PACKAGE_NAME);
+		Tracer.setImplicitPrintKeywordKind(ImplicitKeywordKind.OBJECT_CLASS_NAME);
 		TraceableInfo.setPrintSource(true);
-		TraceableInfo.setPrintTime(false);
-		TraceableInfo.setPrintThread(false);
+		TraceableInfo.setPrintTime(true);
+		TraceableInfo.setPrintThread(true);
 		Tracer.setKeywordPrintStatus(ListEditMade.class, true);
-		Tracer.setKeywordPrintStatus(ListEditObserved.class, true);
 		AnEchoComposerAndLauncher.traceUnawareLaunch(args);
 	}
 

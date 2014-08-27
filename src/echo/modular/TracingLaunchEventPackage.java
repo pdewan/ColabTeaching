@@ -11,7 +11,7 @@ import util.trace.Tracer;
 public class TracingLaunchEventPackage {
 	public static void main (String[] args) {
 		Tracer.showInfo(true);
-		Tracer.setImplicitPrintKeywordKind(ImplicitKeywordKind.OBJECT_CLASS_NAME);
+		Tracer.setImplicitPrintKeywordKind(ImplicitKeywordKind.OBJECT_PACKAGE_NAME);
 		TraceableInfo.setPrintTraceable(true);
 		TraceableInfo.setPrintSource(true);
 		TraceableInfo.setPrintTime(true);
