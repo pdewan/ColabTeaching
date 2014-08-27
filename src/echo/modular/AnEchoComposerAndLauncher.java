@@ -51,10 +51,16 @@ public class AnEchoComposerAndLauncher implements EchoerComposerAndLauncher{
 	public EchoerInteractor getInteractor() {
 		return interactor;
 	}
+	public static void traceUnawareLaunch(String[] args) {
+		(new AnEchoComposerAndLauncher()).composeAndLaunch(args);		
+
+		
+	}
 	public static void main (String[] args) {
 		EchoTracerSetter.traceEchoer();
 		// comment out if testing
-		Tracer.showInfo(false); 
-		(new AnEchoComposerAndLauncher()).composeAndLaunch(args);		
+//		Tracer.showInfo(false); 
+//		(new AnEchoComposerAndLauncher()).composeAndLaunch(args);
+		traceUnawareLaunch(args);
 	}
 }

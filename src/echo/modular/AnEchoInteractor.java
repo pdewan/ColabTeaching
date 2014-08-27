@@ -36,7 +36,7 @@ public class AnEchoInteractor implements EchoerInteractor {
 	}
 	protected void processInput(String anInput) {
 		String aFeedback = computeFeedback(anInput);
-		ListEditInput.newCase(OperationName.ADD, history.size(), aFeedback, ApplicationTags.IM, this);
+		ListEditInput.newCase(OperationName.ADD, history.size(), aFeedback, ApplicationTags.HISTORY, this);
 		addToHistory(aFeedback);
 	}
 	protected void addToHistory(String newValue) {
@@ -65,9 +65,9 @@ public class AnEchoInteractor implements EchoerInteractor {
 	
 	@Override
 	public void elementAdded(int anIndex, Object aNewValue) {
-		ListEditObserved.newCase(OperationName.ADD, anIndex, aNewValue, ApplicationTags.IM, this);
+		ListEditObserved.newCase(OperationName.ADD, anIndex, aNewValue, ApplicationTags.HISTORY, this);
 		displayOutput(history.get(anIndex));
-		ListEditDisplayed.newCase(OperationName.ADD, anIndex, aNewValue, ApplicationTags.IM, this);
+		ListEditDisplayed.newCase(OperationName.ADD, anIndex, aNewValue, ApplicationTags.HISTORY, this);
 
 	}
 	public static List<String> toList(SimpleList<String> aHistory) {

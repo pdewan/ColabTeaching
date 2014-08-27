@@ -24,16 +24,16 @@ public class ASimpleList<ElementType> implements SimpleList<ElementType> {
 		notifyAdd(anIndex, anElement);
 	}
 	public void notifyAdd(List<ListObserver<ElementType>> observers, int index, ElementType newValue) {
-		ListEditNotified.newCase(OperationName.ADD, index, newValue, ApplicationTags.IM, this);
+		ListEditNotified.newCase(OperationName.ADD, index, newValue, ApplicationTags.HISTORY, this);
 		for (ListObserver<ElementType> observer:observers)
 			observer.elementAdded(index, newValue);
 	}
 
 	protected void traceAdd(int anIndex, ElementType anElement) {
-		ListEditMade.newCase(OperationName.ADD, anIndex,anElement, ApplicationTags.IM, this);
+		ListEditMade.newCase(OperationName.ADD, anIndex,anElement, ApplicationTags.HISTORY, this);
 	}
 	protected void traceRemove(int anIndex, ElementType anElement) {
-		ListEditMade.newCase(OperationName.DELETE, anIndex,anElement, ApplicationTags.IM, this);
+		ListEditMade.newCase(OperationName.DELETE, anIndex,anElement, ApplicationTags.HISTORY, this);
 	}
 	public synchronized void add(int anIndex, ElementType anElement) {
 		simpleList.add(anIndex, anElement);
@@ -95,7 +95,7 @@ public class ASimpleList<ElementType> implements SimpleList<ElementType> {
 	}
 
 	public void notifyRemove(List<ListObserver<ElementType>> observers, int index, ElementType newValue) {
-		ListEditNotified.newCase(OperationName.DELETE, index, newValue, ApplicationTags.IM, this);
+		ListEditNotified.newCase(OperationName.DELETE, index, newValue, ApplicationTags.HISTORY, this);
 		for (ListObserver<ElementType> observer:observers)
 			observer.elementRemoved(index, newValue);
 	}
