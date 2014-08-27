@@ -15,7 +15,7 @@ public class TracingLaunchSourcePackage {
 		TraceableInfo.setPrintTraceable(true);
 		TraceableInfo.setPrintSource(true);
 		TraceableInfo.setPrintTime(false);
-		TraceableInfo.setPrintThread(true);
+		TraceableInfo.setPrintThread(false);
 		Tracer.setKeywordPrintStatus(ASimpleList.class, true);
 		AnEchoComposerAndLauncher.traceUnawareLaunch(args);
 	}
