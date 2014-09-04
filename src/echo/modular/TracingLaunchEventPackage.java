@@ -19,7 +19,6 @@ public class TracingLaunchEventPackage {
 		TraceableInfo.setPrintTime(true);
 		TraceableInfo.setPrintThread(true);
 		Tracer.setKeywordPrintStatus(ListEditMade.class, true);
-		Tracer.setKeywordPrintStatus(ListEditObserved.class, true);
 		AnEchoComposerAndLauncher.traceUnawareLaunch(args);
 	}
 
