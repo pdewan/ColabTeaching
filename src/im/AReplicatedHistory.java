@@ -19,13 +19,13 @@ public class AReplicatedHistory<ElementType> extends ASimpleList<ElementType> im
 	public AReplicatedHistory(Communicator theCommunicator) {
 		communicator = theCommunicator;
 	}
-	public synchronized void replicatedAdd(ElementType anInput) {
+	public synchronized void replicatedAdd(ElementType anElement) {
 		int anIndex = size();
-		super.observableAdd(anIndex, anInput);
+		super.observableAdd(anIndex, anElement);
 		if (communicator == null) return;
 //		communicator.toOthers(new ARemoteInput(input));
 //		communicator.toOthers(input);
-		ListEdit listEdit = new AListEdit<ElementType>(OperationName.ADD, anIndex, anInput, ApplicationTags.IM);
+		ListEdit listEdit = new AListEdit<ElementType>(OperationName.ADD, anIndex, anElement, ApplicationTags.IM);
 		ListEditSent.newCase(
 				communicator.getClientName(),
 				listEdit.getOperationName(), 
@@ -34,8 +34,8 @@ public class AReplicatedHistory<ElementType> extends ASimpleList<ElementType> im
 				listEdit.getList(),
 			AddressedSentMessageInfo.OTHERS, this);
 		communicator.toOthers(listEdit);
-//		notifyReplicatingObservers(normalizedIndex(anIndex), anInput);
-		notifyReplicatingObservers(anIndex, anInput);
+//		notifyReplicatingObservers(normalizedIndex(anIndex), anElement);
+		notifyReplicatingObservers(anIndex, anElement);
 
 
 
