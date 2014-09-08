@@ -20,6 +20,7 @@ public class ADynamicSessionJoiner implements SessionMessageListener {
 		sessionManagerHost = aSessionManagerHost;
 		userName = aUserName;
 	}
+	// all users gives users in application session
 	public void clientJoined(
 			String aUserName, String anApplicationName, String aSessionName,
 			boolean aNewSession, boolean aNewApplication, Collection<String> anAllUsers) {
@@ -51,8 +52,8 @@ public class ADynamicSessionJoiner implements SessionMessageListener {
 		String newOrOldApplication = aNewApplication?" new ":"";
 		String message = "User: " + aUserName +
 				" joined " + newOrOldApplication + " application: " + anApplicationName +
-				" in " + newOrOldSession + " session: " + aSessionName +
-				getOtherUserNames(anAllUsers, aUserName);
+				" in " + newOrOldSession + " session: " + aSessionName ;
+//				+	getOtherUserNames(anAllUsers, aUserName);
 		return message;
 	}
 	String getOtherUserNames(Collection<String> allUsers, String myName) {
