@@ -24,8 +24,7 @@ public class ADynamicSessionJoiner implements SessionMessageListener {
 			String aUserName, String anApplicationName, String aSessionName,
 			boolean aNewSession, boolean aNewApplication, Collection<String> anAllUsers) {
 		ClientJoinNotificationReceived.newCase(CommunicatorSelector.getProcessName(), aUserName, (String) anApplicationName, aSessionName, this);
-//		String aMessage = computeAwarenessMessage(aUserName, anApplicationName, aSessionName, aNewSession, aNewApplication, anAllUsers);
-//		JOptionPane.showMessageDialog(null, aMessage);
+        printAwarenessMessage(aUserName, anApplicationName, aSessionName, aNewSession, aNewApplication, anAllUsers);
 		if (aNewApplication && anApplicationName != null && AnIMClientComposerAndLauncher.DEFAULT_APPLICATION_NAME.equals(anApplicationName))
 			joinSession(anApplicationName, aSessionName);
 		
@@ -36,6 +35,14 @@ public class ADynamicSessionJoiner implements SessionMessageListener {
 //		Communicator aCommunicator = CommunicatorSelector.
 //				getCommunicator(sessionManagerHost, aSessionName, anApplicationName, Communicator.RELAYED);
 		
+		
+	}
+	public void printAwarenessMessage(String aUserName, Object anApplicationName, String aSessionName,
+			boolean aNewSession, boolean aNewApplication, Collection<String> anAllUsers) {
+		if (userName.equals(aUserName))  return;
+		String aMessage = computeAwarenessMessage(aUserName, anApplicationName, aSessionName, aNewSession, aNewApplication, anAllUsers);
+//		JOptionPane.showMessageDialog(null, computeAwarenessMessage(aUserName, anApplicationName, aSessionName, aNewSession, aNewApplication, anAllUsers));
+		System.out.println(aMessage);
 		
 	}
 	public String computeAwarenessMessage(String aUserName, Object anApplicationName, String aSessionName,

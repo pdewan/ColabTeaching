@@ -75,8 +75,9 @@ public class AnIMClientComposerAndLauncher extends AnEchoComposerAndLauncher imp
 	}
 
 	public static void main (String[] args) {
-		Tracer.showInfo(true);
+//		Tracer.showInfo(true);
 		SessionTracerSetter.setSessionPrintStatus();
+		Tracer.showInfo(false);
 		(new AnIMClientComposerAndLauncher()).composeAndLaunch(args);
 	}
 }

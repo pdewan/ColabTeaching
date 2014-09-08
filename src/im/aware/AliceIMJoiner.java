@@ -10,10 +10,10 @@ import util.trace.session.ClientJoinNotificationReceived;
 
 public class AliceIMJoiner extends AliceIM{	
 	public static void main (String[] args) {
-//		Tracer.showInfo(true);
 		TraceableInfo.setPrintSource(true);
 		AwareIMTracerSetter.traceAwareIM();
 		Tracer.setKeywordPrintStatus(AProcessExecer.class, true);
+		Tracer.showInfo(false);
 
 		String[] launcherArgs = {SESSION_SERVER_HOST, SESSION_NAME, USER_NAME, null,  Communicator.DIRECT};
 //		String[] launcherArgs = {SESSION_SERVER_HOST, "foo", USER_NAME, USER_NAME,  Communicator.DIRECT};
