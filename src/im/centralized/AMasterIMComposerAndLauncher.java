@@ -18,9 +18,11 @@ public class AMasterIMComposerAndLauncher extends AnIMClientComposerAndLauncher 
 	// same reason as above, no input
 	public void launch() {
 	}
+	@Override
+//	protected  void addHistoryInCoupler(Communicator communicator, SimpleList<String> aHistory) {
 
-	protected  void addHistoryInCoupler(Communicator communicator, SimpleList<String> aHistory) {
-		historyInCoupler = new AMasterInCoupler(aHistory);
+	protected  void addHistoryInCoupler() {
+		historyInCoupler = new AMasterInCoupler(history);
 		communicator.addPeerMessageListener(historyInCoupler);
 	}
 	public static void main (String[] args) {
