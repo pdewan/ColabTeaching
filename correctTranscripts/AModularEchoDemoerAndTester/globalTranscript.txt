@@ -1,33 +1,33 @@
-(AnEchoComposerAndLauncher) I***Tracer: showInfo = true
-(AnEchoComposerAndLauncher) Please enter an input line or quit or history
-(AnEchoComposerAndLauncher) I***EvtType(util.trace.console.ConsoleOutput)  Thread(Echoer ComposerOutput) Output(Please enter an input line or quit or history)
-(AnEchoComposerAndLauncher) $ The woods are lovely dark and deep
-(AnEchoComposerAndLauncher) I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(The woods are lovely dark and deep)
-(AnEchoComposerAndLauncher) I***EvtType(trace.echo.modular.ListEditInput) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(0,[Echo]The woods are lovely dark and deep,Instant Messaging)
-(AnEchoComposerAndLauncher) I***EvtType(trace.echo.modular.ListEditMade) EvtSrc(echo.modular.AHistory)  Thread(main) ListEdit_ADD(0,[Echo]The woods are lovely dark and deep,Instant Messaging)
-(AnEchoComposerAndLauncher) I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(echo.modular.AHistory)  Thread(main) ListEdit_ADD(0,[Echo]The woods are lovely dark and deep,Instant Messaging)
-(AnEchoComposerAndLauncher) I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(0,[Echo]The woods are lovely dark and deep,Instant Messaging)
-(AnEchoComposerAndLauncher) [Echo]The woods are lovely dark and deep
-(AnEchoComposerAndLauncher) I***EvtType(util.trace.console.ConsoleOutput)  Thread(Echoer ComposerOutput) Output([Echo]The woods are lovely dark and deep)
-(AnEchoComposerAndLauncher) Please enter an input line or quit or history
-(AnEchoComposerAndLauncher) I***EvtType(util.trace.console.ConsoleOutput)  Thread(Echoer ComposerOutput) Output(Please enter an input line or quit or history)
-(AnEchoComposerAndLauncher) $ But I have promises to keep
-(AnEchoComposerAndLauncher) I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(But I have promises to keep)
-(AnEchoComposerAndLauncher) I***EvtType(trace.echo.modular.ListEditInput) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(1,[Echo]But I have promises to keep,Instant Messaging)
-(AnEchoComposerAndLauncher) I***EvtType(trace.echo.modular.ListEditMade) EvtSrc(echo.modular.AHistory)  Thread(main) ListEdit_ADD(1,[Echo]But I have promises to keep,Instant Messaging)
-(AnEchoComposerAndLauncher) I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(echo.modular.AHistory)  Thread(main) ListEdit_ADD(1,[Echo]But I have promises to keep,Instant Messaging)
-(AnEchoComposerAndLauncher) I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(1,[Echo]But I have promises to keep,Instant Messaging)
-(AnEchoComposerAndLauncher) [Echo]But I have promises to keep
-(AnEchoComposerAndLauncher) I***EvtType(util.trace.console.ConsoleOutput)  Thread(Echoer ComposerOutput) Output([Echo]But I have promises to keep)
-(AnEchoComposerAndLauncher) Please enter an input line or quit or history
-(AnEchoComposerAndLauncher) I***EvtType(util.trace.console.ConsoleOutput)  Thread(Echoer ComposerOutput) Output(Please enter an input line or quit or history)
-(AnEchoComposerAndLauncher) $ And miles to go before I sleep
-(AnEchoComposerAndLauncher) I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(And miles to go before I sleep)
-(AnEchoComposerAndLauncher) I***EvtType(trace.echo.modular.ListEditInput) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(2,[Echo]And miles to go before I sleep,Instant Messaging)
-(AnEchoComposerAndLauncher) I***EvtType(trace.echo.modular.ListEditMade) EvtSrc(echo.modular.AHistory)  Thread(main) ListEdit_ADD(2,[Echo]And miles to go before I sleep,Instant Messaging)
-(AnEchoComposerAndLauncher) I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(echo.modular.AHistory)  Thread(main) ListEdit_ADD(2,[Echo]And miles to go before I sleep,Instant Messaging)
-(AnEchoComposerAndLauncher) I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(2,[Echo]And miles to go before I sleep,Instant Messaging)
-(AnEchoComposerAndLauncher) [Echo]And miles to go before I sleep
-(AnEchoComposerAndLauncher) I***EvtType(util.trace.console.ConsoleOutput)  Thread(Echoer ComposerOutput) Output([Echo]And miles to go before I sleep)
-(AnEchoComposerAndLauncher) Please enter an input line or quit or history
-(AnEchoComposerAndLauncher) I***EvtType(util.trace.console.ConsoleOutput)  Thread(Echoer ComposerOutput) Output(Please enter an input line or quit or history)
+(TestableTracingLaunch) I***Tracer: showInfo = true
+(TestableTracingLaunch) Please enter an input line or quit or history
+(TestableTracingLaunch) I***EvtType(util.trace.console.ConsoleOutput)  Thread(TestableTracingLaunchOutput) Output(Please enter an input line or quit or history)
+(TestableTracingLaunch) $ The woods are lovely dark and deep
+(TestableTracingLaunch) I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(The woods are lovely dark and deep)
+(TestableTracingLaunch) I***EvtType(trace.echo.ListEditInput) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(0,The woods are lovely dark and deep,History)
+(TestableTracingLaunch) I***EvtType(trace.echo.ListEditMade) EvtSrc(echo.modular.ASimpleList)  Thread(main) ListEdit_ADD(0,The woods are lovely dark and deep,History)
+(TestableTracingLaunch) I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(echo.modular.ASimpleList)  Thread(main) ListEdit_ADD(0,The woods are lovely dark and deep,History)
+(TestableTracingLaunch) I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(0,The woods are lovely dark and deep,History)
+(TestableTracingLaunch) The woods are lovely dark and deep
+(TestableTracingLaunch) I***EvtType(util.trace.console.ConsoleOutput)  Thread(TestableTracingLaunchOutput) Output(The woods are lovely dark and deep)
+(TestableTracingLaunch) Please enter an input line or quit or history
+(TestableTracingLaunch) I***EvtType(util.trace.console.ConsoleOutput)  Thread(TestableTracingLaunchOutput) Output(Please enter an input line or quit or history)
+(TestableTracingLaunch) $ But I have promises to keep
+(TestableTracingLaunch) I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(But I have promises to keep)
+(TestableTracingLaunch) I***EvtType(trace.echo.ListEditInput) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(1,But I have promises to keep,History)
+(TestableTracingLaunch) I***EvtType(trace.echo.ListEditMade) EvtSrc(echo.modular.ASimpleList)  Thread(main) ListEdit_ADD(1,But I have promises to keep,History)
+(TestableTracingLaunch) I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(echo.modular.ASimpleList)  Thread(main) ListEdit_ADD(1,But I have promises to keep,History)
+(TestableTracingLaunch) I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(1,But I have promises to keep,History)
+(TestableTracingLaunch) But I have promises to keep
+(TestableTracingLaunch) I***EvtType(util.trace.console.ConsoleOutput)  Thread(TestableTracingLaunchOutput) Output(But I have promises to keep)
+(TestableTracingLaunch) Please enter an input line or quit or history
+(TestableTracingLaunch) I***EvtType(util.trace.console.ConsoleOutput)  Thread(TestableTracingLaunchOutput) Output(Please enter an input line or quit or history)
+(TestableTracingLaunch) $ And miles to go before I sleep
+(TestableTracingLaunch) I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(And miles to go before I sleep)
+(TestableTracingLaunch) I***EvtType(trace.echo.ListEditInput) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(2,And miles to go before I sleep,History)
+(TestableTracingLaunch) I***EvtType(trace.echo.ListEditMade) EvtSrc(echo.modular.ASimpleList)  Thread(main) ListEdit_ADD(2,And miles to go before I sleep,History)
+(TestableTracingLaunch) I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(echo.modular.ASimpleList)  Thread(main) ListEdit_ADD(2,And miles to go before I sleep,History)
+(TestableTracingLaunch) I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(echo.modular.AnEchoInteractor)  Thread(main) ListEdit_ADD(2,And miles to go before I sleep,History)
+(TestableTracingLaunch) And miles to go before I sleep
+(TestableTracingLaunch) I***EvtType(util.trace.console.ConsoleOutput)  Thread(TestableTracingLaunchOutput) Output(And miles to go before I sleep)
+(TestableTracingLaunch) Please enter an input line or quit or history
+(TestableTracingLaunch) I***EvtType(util.trace.console.ConsoleOutput)  Thread(TestableTracingLaunchOutput) Output(Please enter an input line or quit or history)

@@ -28,6 +28,8 @@ public class LauncherOfMonolithicEchoTester extends LauncherOfMonolithicEchoDemo
 	}
 	public static ConsoleModelBasedDemoerAndTester createNewDemoer() {
 		return new AMonolithicEchoConsoleModelBasedDemoerAndTester(false);
+//		return new AMonolithicEchoConsoleModelBasedDemoerAndTester(true);
+
 	}
 	public static void newLaunch() {
 		ConsoleTraceSetter.traceConsole(); // needed for comparing outputs

@@ -15,7 +15,7 @@ public class AliceIM implements ExampleIMSession{
 	public static final String USER_NAME = DistributedTags.CLIENT_1;
 	public static void main (String[] args) {
 		String[] launcherArgs = {SESSION_SERVER_HOST, SESSION_NAME, USER_NAME,  APPLICATION_NAME,  Communicator.DIRECT};
-//		Tracer.showInfo(true);
+		Tracer.showInfo(true);
 		IMTracerSetter.traceIM();
 //		Tracer.setKeywordPrintStatus(ClientJoinFinished.class, true);
 //		SessionTracerSetter.setSessionPrintStatus();

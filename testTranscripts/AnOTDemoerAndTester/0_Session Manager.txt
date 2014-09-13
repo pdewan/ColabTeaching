@@ -1,5 +1,0 @@
-I***Tracer: showInfo = true
-Registered Session Manager with RMI Server (dewan-t431s, 1099)
-I***EvtType(util.trace.session.ServerClientJoined) Time(1407248807088, 10:26:47) Thread(Session Manager Message Receiver) Process(Session Manager) User(Alice), App(IM), Session(FrostySession)
-I***EvtType(util.trace.session.ServerClientJoined) Time(1407248811169, 10:26:51) Thread(Session Manager Message Receiver) Process(Session Manager) User(Bob), App(IM), Session(FrostySession)
-I***EvtType(util.trace.session.ServerClientJoined) Time(1407248815086, 10:26:55) Thread(Session Manager Message Receiver) Process(Session Manager) User(Cathy), App(IM), Session(FrostySession)

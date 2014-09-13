@@ -2,19 +2,19 @@
 (MonolithicEchoer) I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(Please enter an input line or quit or history)
 (MonolithicEchoer) $ The woods are lovely dark and deep
 (MonolithicEchoer) I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(The woods are lovely dark and deep)
-(MonolithicEchoer) [Echo]The woods are lovely dark and deep
-(MonolithicEchoer) I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output([Echo]The woods are lovely dark and deep)
+(MonolithicEchoer) The woods are lovely dark and deep
+(MonolithicEchoer) I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(The woods are lovely dark and deep)
 (MonolithicEchoer) Please enter an input line or quit or history
 (MonolithicEchoer) I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(Please enter an input line or quit or history)
 (MonolithicEchoer) $ But I have promises to keep
 (MonolithicEchoer) I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(But I have promises to keep)
-(MonolithicEchoer) [Echo]But I have promises to keep
-(MonolithicEchoer) I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output([Echo]But I have promises to keep)
+(MonolithicEchoer) But I have promises to keep
+(MonolithicEchoer) I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(But I have promises to keep)
 (MonolithicEchoer) Please enter an input line or quit or history
 (MonolithicEchoer) I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(Please enter an input line or quit or history)
 (MonolithicEchoer) $ And miles to go before I sleep
 (MonolithicEchoer) I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(And miles to go before I sleep)
-(MonolithicEchoer) [Echo]And miles to go before I sleep
-(MonolithicEchoer) I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output([Echo]And miles to go before I sleep)
+(MonolithicEchoer) And miles to go before I sleep
+(MonolithicEchoer) I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(And miles to go before I sleep)
 (MonolithicEchoer) Please enter an input line or quit or history
 (MonolithicEchoer) I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(Please enter an input line or quit or history)

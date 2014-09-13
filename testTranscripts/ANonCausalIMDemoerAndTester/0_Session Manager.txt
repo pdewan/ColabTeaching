@@ -1,8 +1,0 @@
-I***Tracer: showInfo = true
-SessionRegistry: STARTING ...
-I***EvtType(util.trace.console.ConsoleError)  Thread(Server Session Manager Instant MessagingInput) Error(SessionRegistry: STARTING ...)
-Registered Session Manager with RMI Server (dewan-t431s, 1099)
-I***EvtType(util.trace.console.ConsoleOutput)  Thread(Server Session Manager Instant MessagingOutput) Output(Registered Session Manager with RMI Server (dewan-t431s, 1099))
-I***EvtType(util.trace.session.ServerClientJoined) EvtSrc(util.session.ASession)  Thread(Session Manager Message Receiver) Process(Session Manager) User(Alice), App(IM), Session(FrostySession)
-I***EvtType(util.trace.session.ServerClientJoined) EvtSrc(util.session.ASession)  Thread(Session Manager Message Receiver) Process(Session Manager) User(Bob), App(IM), Session(FrostySession)
-I***EvtType(util.trace.session.ServerClientJoined) EvtSrc(util.session.ASession)  Thread(Session Manager Message Receiver) Process(Session Manager) User(Cathy), App(IM), Session(FrostySession)

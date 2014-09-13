@@ -36,7 +36,7 @@ public class MonolithicEchoer  {
 		history.add(history.size(), newValue);
 	}
 	protected static void processInput(String anInput) {
-		System.out.println("received input");
+//		System.out.println("received input");
 		// received input
 		ListEditInput.newCase(OperationName.ADD, history.size(), anInput, ApplicationTags.HISTORY, MonolithicEchoer.class);		
 		String aFeedback = EchoUtilities.echo(anInput);

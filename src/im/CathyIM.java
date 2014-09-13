@@ -14,7 +14,7 @@ public class CathyIM implements ExampleIMSession{
 	public static void main (String[] args) {
 		String[] launcherArgs = {SESSION_SERVER_HOST, SESSION_NAME, USER_NAME,  APPLICATION_NAME,  Communicator.RELAYED};
 
-//		Tracer.showInfo(true);
+		Tracer.showInfo(true);
 		IMTracerSetter.traceIM();
 //		SessionTracerSetter.setSessionPrintStatus();
 //		Tracer.setKeywordPrintStatus(ClientJoinFinished.class, true);

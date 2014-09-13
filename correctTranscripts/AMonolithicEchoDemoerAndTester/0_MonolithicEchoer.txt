@@ -2,19 +2,19 @@ Please enter an input line or quit or history
 I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(Please enter an input line or quit or history)
 $ The woods are lovely dark and deep
 I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(The woods are lovely dark and deep)
-[Echo]The woods are lovely dark and deep
-I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output([Echo]The woods are lovely dark and deep)
+The woods are lovely dark and deep
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(The woods are lovely dark and deep)
 Please enter an input line or quit or history
 I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(Please enter an input line or quit or history)
 $ But I have promises to keep
 I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(But I have promises to keep)
-[Echo]But I have promises to keep
-I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output([Echo]But I have promises to keep)
+But I have promises to keep
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(But I have promises to keep)
 Please enter an input line or quit or history
 I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(Please enter an input line or quit or history)
 $ And miles to go before I sleep
 I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(And miles to go before I sleep)
-[Echo]And miles to go before I sleep
-I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output([Echo]And miles to go before I sleep)
+And miles to go before I sleep
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(And miles to go before I sleep)
 Please enter an input line or quit or history
 I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(Please enter an input line or quit or history)
