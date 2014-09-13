@@ -7,7 +7,7 @@ import util.trace.Tracer;
 public class OTIMTracerSetter extends IMTracerSetter {
 	
 	public static void traceOTIM() {
-		Tracer.showInfo(true);
+//		Tracer.showInfo(true);
 		EchoTracerSetter.setTraceParameters();
 		setOTPrintStatus();		
 	}

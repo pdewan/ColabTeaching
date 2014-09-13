@@ -103,14 +103,14 @@ I***EvtType(trace.echo.ListEditMade) EvtSrc(im.AReplicatedHistory)  Thread(main)
 I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(im.AReplicatedHistory)  Thread(main) ListEdit_ADD(11,[Cathy]And miles to go before I sleep,History)
 I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(im.AnIMInteractor)  Thread(main) ListEdit_ADD(11,[Cathy]And miles to go before I sleep,History)
 [Cathy]And miles to go before I sleep
-$ history
-I***EvtType(util.trace.console.ConsoleInput)  Thread(Cathy Instant MessagingOutput) Input(history)
 I***EvtType(util.trace.console.ConsoleOutput)  Thread(Cathy Instant MessagingOutput) Output([Cathy]And miles to go before I sleep)
 I***EvtType(trace.im.ListEditSent) EvtSrc(im.AReplicatedHistory)  Thread(main) Process(Cathy)ListEdit_ADD(11, [Cathy]And miles to go before I sleep, Instant Messaging) Address(others)
 I***EvtType(util.trace.session.SendDataRequest) EvtSrc(util.session.ARelayerCommunicator)  Thread(main) Process(Cathy) Msg([11; [Cathy]And miles to go before I sleep]) Address(others) Delivery(Relayed)
 I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(im.AReplicatedHistory)  Thread(main) ListEdit_ADD(11,[Cathy]And miles to go before I sleep,History)
 Please enter an input line or quit or history
 I***EvtType(util.trace.console.ConsoleOutput)  Thread(Cathy Instant MessagingOutput) Output(Please enter an input line or quit or history)
+$ history
+I***EvtType(util.trace.console.ConsoleInput)  Thread(Bob Instant MessagingOutput) Input(history)
 [Alice]Alice0, [Alice]The woods are lovely dark and deep, [Bob]Bob1, [Bob]But I have promises to keep, [Cathy]Cathy2, [Cathy]And miles to go before I sleep, [Alice]Alice3, [Alice]The woods are lovely dark and deep, [Bob]Bob4, [Bob]But I have promises to keep, [Cathy]Cathy5, [Cathy]And miles to go before I sleep
 I***EvtType(util.trace.console.ConsoleOutput)  Thread(Cathy Instant MessagingOutput) Output([Alice]Alice0, [Alice]The woods are lovely dark and deep, [Bob]Bob1, [Bob]But I have promises to keep, [Cathy]Cathy2, [Cathy]And miles to go before I sleep, [Alice]Alice3, [Alice]The woods are lovely dark and deep, [Bob]Bob4, [Bob]But I have promises to keep, [Cathy]Cathy5, [Cathy]And miles to go before I sleep)
 

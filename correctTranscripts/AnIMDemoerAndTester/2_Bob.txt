@@ -108,9 +108,9 @@ I***EvtType(trace.echo.ListEditMade) EvtSrc(im.AReplicatedHistory)  Thread(Messa
 I***EvtType(trace.echo.modular.ListEditNotified) EvtSrc(im.AReplicatedHistory)  Thread(Message Receiver) ListEdit_ADD(11,[Cathy]And miles to go before I sleep,History)
 I***EvtType(trace.echo.modular.ListEditObserved) EvtSrc(im.AnIMInteractor)  Thread(Message Receiver) ListEdit_ADD(11,[Cathy]And miles to go before I sleep,History)
 [Cathy]And miles to go before I sleep
-I***EvtType(util.trace.console.ConsoleOutput)  Thread(Bob Instant MessagingOutput) Output([Cathy]And miles to go before I sleep)
 $ history
-I***EvtType(util.trace.console.ConsoleInput)  Thread(Cathy Instant MessagingOutput) Input(history)
+I***EvtType(util.trace.console.ConsoleInput)  Thread(Bob Instant MessagingOutput) Input(history)
+I***EvtType(util.trace.console.ConsoleOutput)  Thread(Bob Instant MessagingOutput) Output([Cathy]And miles to go before I sleep)
 [Alice]Alice0, [Alice]The woods are lovely dark and deep, [Bob]Bob1, [Bob]But I have promises to keep, [Cathy]Cathy2, [Cathy]And miles to go before I sleep, [Alice]Alice3, [Alice]The woods are lovely dark and deep, [Bob]Bob4, [Bob]But I have promises to keep, [Cathy]Cathy5, [Cathy]And miles to go before I sleep
 I***EvtType(util.trace.console.ConsoleOutput)  Thread(Bob Instant MessagingOutput) Output([Alice]Alice0, [Alice]The woods are lovely dark and deep, [Bob]Bob1, [Bob]But I have promises to keep, [Cathy]Cathy2, [Cathy]And miles to go before I sleep, [Alice]Alice3, [Alice]The woods are lovely dark and deep, [Bob]Bob4, [Bob]But I have promises to keep, [Cathy]Cathy5, [Cathy]And miles to go before I sleep)
 
