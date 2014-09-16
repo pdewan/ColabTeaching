@@ -7,9 +7,9 @@ import util.tags.ApplicationTags;
 import util.trace.session.AddressedSentMessageInfo;
 import echo.modular.ASimpleList;
 
-public class ACentralizedHistory<ElementType> extends ASimpleList<ElementType> implements CentralizedHistory<ElementType> {
+public class AMasterSimpleList<ElementType> extends ASimpleList<ElementType> implements MasterSimpleList<ElementType> {
 	Communicator communicator;
-	public ACentralizedHistory(Communicator theCommunicator) {
+	public AMasterSimpleList(Communicator theCommunicator) {
 		communicator = theCommunicator;
 	}
 	

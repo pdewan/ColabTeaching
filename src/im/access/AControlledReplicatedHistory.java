@@ -1,6 +1,6 @@
 package im.access;
 
-import im.AReplicatedHistory;
+import im.AReplicatedSimpleList;
 
 import java.beans.PropertyChangeSupport;
 import java.beans.PropertyVetoException;
@@ -13,7 +13,7 @@ import util.models.Vetoer;
 import util.session.Communicator;
 
 public class AControlledReplicatedHistory<ElementType> 
-		extends AReplicatedHistory<ElementType> 
+		extends AReplicatedSimpleList<ElementType> 
 		implements ControlledReplicatedHistory<ElementType>  {
 	VetoableChangeSupport vetoableChangeSupport = new VetoableChangeSupport(this);
 //	List<Vetoer> vetoers = new ArrayList();

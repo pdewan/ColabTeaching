@@ -12,11 +12,11 @@ import util.trace.session.AddressedSentMessageInfo;
 import echo.modular.ASimpleList;
 import echo.modular.ListObserver;
 
-public class AReplicatedHistory<ElementType> extends ASimpleList<ElementType> implements ReplicatedHistory<ElementType> {
+public class AReplicatedSimpleList<ElementType> extends ASimpleList<ElementType> implements ReplicatedSimpleList<ElementType> {
 	Communicator communicator;
 	List<ListObserver<ElementType>> replicatingObservers = new ArrayList();
 
-	public AReplicatedHistory(Communicator theCommunicator) {
+	public AReplicatedSimpleList(Communicator theCommunicator) {
 		communicator = theCommunicator;
 	}
 	public synchronized void replicatedAdd(ElementType anElement) {

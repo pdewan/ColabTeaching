@@ -1,6 +1,7 @@
 package im.centralized;
 
 import im.AHistoryInCoupler;
+import im.ListEdit;
 import echo.modular.SimpleList;
 
 public class AMasterInCoupler extends AHistoryInCoupler {
@@ -11,10 +12,12 @@ public class AMasterInCoupler extends AHistoryInCoupler {
 //	protected void processReceivedListEdit (ListEdit<String> aRemoteEdit, String aUserName) {
 //		history.add(aRemoteEdit.getElement());			
 //	}	
-	public void objectReceived(Object message, String userName) {
+	public void objectReceived(Object aMessage, String aUserName) {
 		// need for integration with RPC
-		if (message instanceof String)
-			((CentralizedHistory<String>) history).centralizedAdd((String) message, userName); 
+		if (aMessage instanceof ListEdit) {
+			ListEdit<String> aListEdit = (ListEdit) aMessage;
+			((MasterSimpleList<String>) history).centralizedAdd(aListEdit.getElement(), aUserName); 
+		}
 	}
 	protected void connectModelInteractor() {
 		

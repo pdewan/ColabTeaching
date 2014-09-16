@@ -1,11 +1,12 @@
-package im.centralized;
+package im.centralized.awareinteractor;
 
 import im.AnIMClientComposerAndLauncher;
+import im.centralized.AMasterSimpleList;
 import util.session.Communicator;
 import util.trace.Tracer;
 import util.trace.session.SessionTracerSetter;
 import echo.modular.SimpleList;
-public class AMasterIMComposerAndLauncher extends AnIMClientComposerAndLauncher {
+public class AnAwareMasterIMComposerAndLauncher extends AnIMClientComposerAndLauncher {
 	
 		
 	protected SimpleList<String> createHistory() {
@@ -22,12 +23,12 @@ public class AMasterIMComposerAndLauncher extends AnIMClientComposerAndLauncher 
 //	protected  void addHistoryInCoupler(Communicator communicator, SimpleList<String> aHistory) {
 
 	protected  void addHistoryInCoupler() {
-		historyInCoupler = new AMasterInCoupler(history);
+		historyInCoupler = new AnAwareMasterInCoupler(history);
 		communicator.addPeerMessageListener(historyInCoupler);
 	}
 	public static void main (String[] args) {
 		Tracer.showInfo(true);
 		SessionTracerSetter.setSessionPrintStatus();
-		(new AMasterIMComposerAndLauncher()).composeAndLaunch(args);
+		(new AnAwareMasterIMComposerAndLauncher()).composeAndLaunch(args);
 	}
 }

@@ -1,4 +1,4 @@
-package im.centralized;
+package im.centralized.awareinteractor;
 
 import im.ALauncherOfIM;
 import im.LauncherOfIM;
@@ -6,7 +6,7 @@ import util.tags.DistributedTags;
 import bus.uigen.pipe.AConsoleModelBasedLauncher;
 import bus.uigen.pipe.MainClassLaunchingUtility;
 
-public class ALauncherOfCentarlizedIM extends ALauncherOfIM implements LauncherOfIM {
+public class AnAwareLauncherOfCentralizedIM extends ALauncherOfIM implements LauncherOfIM {
 	
 	public Class[] mainClasses() {
 		return new Class[] { 
@@ -26,26 +26,26 @@ public class ALauncherOfCentarlizedIM extends ALauncherOfIM implements LauncherO
 		};
 	}
 	public Class modelClass() {
-		return MasterIMModelLauncher.class;
+		return AwareMasterIMModelLauncher.class;
 		// return OTSessionManagerServerStarter.class;
 
 	}
 	
 
 	public Class aliceClass() {
-		return AliceSlaveIM.class;
+		return AliceAwareSlaveIM.class;
 		// return AliceOTIM.class;
 	}
 	
 
 	public Class bobClass() {
-		return BobSlaveIM.class;
+		return BobAwareSlaveIM.class;
 		// return BobOTIM.class;
 	}
 	
 
 	public Class cathyClass() {
-		return CathySlaveIM.class;
+		return CathyAwareSlaveIM.class;
 		// return CathyOTIM.class;
 	}
 	
@@ -61,7 +61,7 @@ public class ALauncherOfCentarlizedIM extends ALauncherOfIM implements LauncherO
 //	}
 	
 	public static void main(String args[]) {
-		(new ALauncherOfCentarlizedIM()).launchWithConsoles();
+		(new AnAwareLauncherOfCentralizedIM()).launchWithConsoles();
 	}
 
 }

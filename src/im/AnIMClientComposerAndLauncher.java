@@ -24,11 +24,11 @@ public class AnIMClientComposerAndLauncher extends AnEchoComposerAndLauncher imp
 		return DEFAULT_APPLICATION_NAME;
 	}
 	protected SimpleList<String> createHistory() {
-		return new AReplicatedHistory<String>(communicator);
+		return new AReplicatedSimpleList<String>(communicator);
 	}
 	// factory method
 	protected EchoerInteractor createInteractor() {
-		return new AnIMInteractor((ReplicatedHistory) history, communicator);
+		return new AnIMInteractor((ReplicatedSimpleList) history, communicator);
 	}	
 	protected void addCollaborationFunctions() {
 		addHistoryInCoupler();

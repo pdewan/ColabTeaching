@@ -1,20 +1,21 @@
-package im.centralized;
+package im.centralized.awareinteractor;
 
 import im.AnIMClientComposerAndLauncher;
+import im.centralized.ASlaveInCoupler;
 import util.session.Communicator;
 import util.trace.Tracer;
 import util.trace.session.SessionTracerSetter;
 import echo.modular.ASimpleList;
 import echo.modular.EchoerInteractor;
 import echo.modular.SimpleList;
-public class ASlaveIMComposerAndLauncher extends AnIMClientComposerAndLauncher {
+public class AnAwareSlaveIMComposerAndLauncher extends AnIMClientComposerAndLauncher {
 	
 	
-	protected SlaveSimpleList<String> createHistory() {
-		return new ASlaveSimpleList<String>(communicator);
+	protected SimpleList<String> createHistory() {
+		return new ASimpleList<String>();
 	}
 	protected EchoerInteractor createInteractor() {
-		return new ASlaveIMInteractor( (SlaveSimpleList) history, communicator);
+		return new AnAwareSlaveIMInteractor( history, communicator);
 	}		
 
 	protected  void addHistoryInCoupler(Communicator communicator, SimpleList<String> aHistory) {
@@ -24,6 +25,6 @@ public class ASlaveIMComposerAndLauncher extends AnIMClientComposerAndLauncher {
 	public static void main (String[] args) {
 		Tracer.showInfo(true);
 		SessionTracerSetter.setSessionPrintStatus();
-		(new ASlaveIMComposerAndLauncher()).composeAndLaunch(args);
+		(new AnAwareSlaveIMComposerAndLauncher()).composeAndLaunch(args);
 	}
 }

@@ -1,9 +1,9 @@
 package im.access;
 
 import echo.modular.SimpleList;
-import im.AReplicatedHistory;
+import im.AReplicatedSimpleList;
 import im.AnIMClientComposerAndLauncher;
-import im.ReplicatedHistory;
+import im.ReplicatedSimpleList;
 import im.aware.ASessionAwarenessProvider;
 import im.aware.AnAwareIMComposerAndLauncher;
 import util.session.Communicator;

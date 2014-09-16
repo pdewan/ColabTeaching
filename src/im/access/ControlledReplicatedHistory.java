@@ -3,9 +3,9 @@ package im.access;
 import util.models.PropertyVetoerRegistrar;
 import util.models.Vetoer;
 import util.models.VetoerRegisterer;
-import im.ReplicatedHistory;
+import im.ReplicatedSimpleList;
 
-public interface ControlledReplicatedHistory<ElementType> extends ReplicatedHistory<ElementType>, PropertyVetoerRegistrar {
+public interface ControlledReplicatedHistory<ElementType> extends ReplicatedSimpleList<ElementType>, PropertyVetoerRegistrar {
 
 	
 

@@ -17,7 +17,7 @@ public class AnIMInteractor extends AnEchoInteractor  {
 	}	
 	protected void addToHistory(String newValue) {
 //		((ReplicatedHistory) history).replicatedAdd(history.size(), newValue);
-		((ReplicatedHistory) history).replicatedAdd(newValue);
+		((ReplicatedSimpleList) history).replicatedAdd(newValue);
 
 	}
 	protected void processQuit() {
