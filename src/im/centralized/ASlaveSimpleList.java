@@ -26,7 +26,7 @@ public class ASlaveSimpleList<ElementType> extends ASimpleList<ElementType> impl
 				listEdit.getElement(), 
 				listEdit.getList(),
 			AddressedSentMessageInfo.CLIENT, this); 
-		communicator.toClient(AwareMasterIMModelLauncher.CLIENT_NAME, listEdit);
+		communicator.toClient(MasterIMModelLauncher.CLIENT_NAME, listEdit);
 		
 	}
 	
