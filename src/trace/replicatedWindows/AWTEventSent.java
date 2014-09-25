@@ -3,6 +3,7 @@ package trace.replicatedWindows;
 import java.awt.AWTEvent;
 
 import trace.echo.modular.OperationName;
+import util.session.CommunicatorSelector;
 
 public class AWTEventSent extends CommunicatedAWTEventInfo{
 
@@ -25,6 +26,13 @@ public class AWTEventSent extends CommunicatedAWTEventInfo{
 		AWTEventSent retVal = new AWTEventSent(aMessage, aProcessName, anAWTEvent, aGlobalId,  aSourceOrDestination, aFinder);
 		retVal.announce();
 		return retVal;
+	}
+	
+	public static AWTEventSent newCase(
+			
+			AWTEvent anAWTEvent, String aGlobalId, String aSourceOrDestination, Object aFinder) {
+			
+		return AWTEventSent.newCase(CommunicatorSelector.getProcessName(), anAWTEvent, aGlobalId, aSourceOrDestination, aFinder);
 	}
 
 }

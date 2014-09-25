@@ -49,7 +49,7 @@ public class CommunicatedAWTEventInfo extends AWTEventInfo {
 	}
 	
 	public static String toString(String aProcessName, AWTEvent anEvent, String aGlobalId,  String aDestinationOrSource) {
-		return ProcessInfo.toString(aProcessName)  + AWTEventInfo.toLocalInfoToString(anEvent, aGlobalId) + 
+		return ProcessInfo.toString(aProcessName)  +  " " + AWTEventInfo.toLocalInfoToString(anEvent, aGlobalId) + 
 //				" Address(" + 
 				" " + AddressedMessageInfo.ADDRESS + "(" +
 				aDestinationOrSource + ")";
