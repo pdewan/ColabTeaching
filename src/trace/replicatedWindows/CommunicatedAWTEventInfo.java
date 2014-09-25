@@ -14,17 +14,18 @@ public class CommunicatedAWTEventInfo extends AWTEventInfo {
 	public CommunicatedAWTEventInfo(String aMessage,
 			String aProcessName,
 			AWTEvent anAWTEvent, 
+			String aGlobalId,
 			String aDestinationOrSource,
 			Object aFinder) {
-		super(aMessage, anAWTEvent, aFinder);
+		super(aMessage, anAWTEvent, aGlobalId, aFinder);
 //		this.operationName = aName;
 //		this.index = anIndex;
 //		this.element = anElement;
 		processName = aProcessName;
 		destinationOrSource = aDestinationOrSource;
 	}
-	public CommunicatedAWTEventInfo(String aProcessName, AWTEvent anAWTEvent, String aDestinationOrSource) {
-		this("",  aProcessName, anAWTEvent, aDestinationOrSource, null);		
+	public CommunicatedAWTEventInfo(String aProcessName, AWTEvent anAWTEvent, String aGlobalId, String aDestinationOrSource) {
+		this("",  aProcessName, anAWTEvent, aGlobalId, aDestinationOrSource, null);		
 	}
 	public CommunicatedAWTEventInfo(String aMessage, String aProcessName, String aDestinationOrSource, AWTEventInfo anAWTEventInfo) {
 		super(aMessage, anAWTEventInfo);
@@ -47,14 +48,14 @@ public class CommunicatedAWTEventInfo extends AWTEventInfo {
 		return destinationOrSource;
 	}
 	
-	public static String toString(String aProcessName, AWTEvent anEvent,  String aDestinationOrSource) {
-		return ProcessInfo.toString(aProcessName)  + AWTEventInfo.toLocalInfoToString(anEvent) + 
+	public static String toString(String aProcessName, AWTEvent anEvent, String aGlobalId,  String aDestinationOrSource) {
+		return ProcessInfo.toString(aProcessName)  + AWTEventInfo.toLocalInfoToString(anEvent, aGlobalId) + 
 //				" Address(" + 
 				" " + AddressedMessageInfo.ADDRESS + "(" +
 				aDestinationOrSource + ")";
 	}
 	public String alternativeToString() {
-		return toString(processName, awtEvent, destinationOrSource);
+		return toString(processName, awtEvent, globalId, destinationOrSource);
 	}
 	public String getProcessName() {
 		return processName;

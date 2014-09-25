@@ -10,6 +10,7 @@ import util.trace.TraceableInfo;
 public class AWTEventInfo extends TraceableInfo {
 	protected AWTEvent awtEvent;
 	String name;
+	String globalId;
 	String paramString;
 	
 	
@@ -22,16 +23,20 @@ public class AWTEventInfo extends TraceableInfo {
 	}
 
 	public static final String AWT_EVENT = "AWTEvent";
-	public static String[] awtEventEqualPropertiesArray = {};
+	public static String[] awtEventEqualPropertiesArray = {"name", "globalId", "paramString"};
 //	public static List<String> listEditEqualPropertiesList = Arrays.asList(listEditEqualPropertiesArray);
 
-	public AWTEventInfo(String aMessage,  AWTEvent anAWTEvent,  Object aFinder) {
+	public AWTEventInfo(String aMessage,  AWTEvent anAWTEvent, String aGlobalId,  Object aFinder) {
 		super(aMessage,  aFinder);
 		awtEvent = anAWTEvent;
 		if (anAWTEvent.getSource() instanceof Component) {
 			name = ((Component ) anAWTEvent.getSource()).getName();
 		}
+		globalId = aGlobalId;
 		
+	}
+	public String getGlobalId() {
+		return globalId;
 	}
 	protected void setEqualPropertiesList() {
 		super.setEqualPropertiesList();
@@ -47,12 +52,14 @@ public class AWTEventInfo extends TraceableInfo {
 	}
 	
 	
-	public AWTEventInfo(String aName, String aParamString) {
-		this("", aName, aParamString, (Traceable) null); 
+	public AWTEventInfo(String aName, String aParamString, String aGlobalId) {
+		this("", aName, aParamString, aGlobalId, (Traceable) null); 
 		
 	}
 	public AWTEventInfo(String aMessage, 
-			String aName, String aParamString, Traceable aTraceable
+			String aName, String aParamString, 
+			String aGlobalId,
+			Traceable aTraceable
 //			String aProcessName,			
 //			Long aTimeStamp,
 //			String aThreadName,
@@ -61,6 +68,7 @@ public class AWTEventInfo extends TraceableInfo {
 		super(aMessage, aTraceable);
 		name = aName;
 		paramString = aParamString;
+		globalId = aGlobalId;
 		
 	}
 	public AWTEventInfo(String aMessage, 
@@ -73,6 +81,7 @@ public class AWTEventInfo extends TraceableInfo {
 		this(aMessage, 
 				anInfo.name,
 				anInfo.paramString,
+				anInfo.globalId,
 				null
 
 
@@ -84,8 +93,9 @@ public class AWTEventInfo extends TraceableInfo {
 		List<String> anArgs = getArgs(aMessage, AWT_EVENT);
 		String aName = getName(anArgs);
 		String aParamString = getParamString(anArgs);
+		String aGlobalId = getGlobalId(anArgs);
 		
-		return new AWTEventInfo(aMessage, aName, aParamString,  aTraceable);
+		return new AWTEventInfo(aMessage, aName, aParamString, aGlobalId,  aTraceable);
 				
 	}
 	
@@ -108,7 +118,7 @@ public class AWTEventInfo extends TraceableInfo {
 		return awtEvent;
 	}
 	
-	public static String toString(AWTEvent anAWTEvent) {
+	public static String toString(AWTEvent anAWTEvent, String aGlobalId) {
 		if (anAWTEvent == null) {
 			System.out.println("Null event");
 			return "";
@@ -121,13 +131,14 @@ public class AWTEventInfo extends TraceableInfo {
 				" " + AWT_EVENT +  ("(") + 
 				aName
 				+ "," +
+				aGlobalId
+				+ "," +
 				anAWTEvent.paramString() 
-
-				
+								
 			+ ")";
 				
 	}
-	public static String toLocalInfoToString(AWTEvent anAWTEvent) {
+	public static String toLocalInfoToString(AWTEvent anAWTEvent, String aGlobalId) {
 		if (anAWTEvent == null) {
 			System.out.println("Null event");
 			return "";
@@ -139,18 +150,24 @@ public class AWTEventInfo extends TraceableInfo {
 	return 
 			AWT_EVENT +  ("(") + 
 			aName
+			
 			+ "," +
-			anAWTEvent.paramString() 
+				aGlobalId	
+				+ "," +
+						anAWTEvent.paramString()
 		+ ")";
 			
 }
 	public static String getName(List<String> anArgs) {
 		return anArgs.get(0);		
 	}
-	
-	public static String getParamString(List<String> anArgs) {
+	public static String getGlobalId(List<String> anArgs) {
 		return anArgs.get(1);
 	}
+	public static String getParamString(List<String> anArgs) {
+		return anArgs.get(2);
+	}
+	
 	
 
 //	public String toLocalInfoToString() {
@@ -162,7 +179,7 @@ public class AWTEventInfo extends TraceableInfo {
 //				LIST_EDIT + "(" +
 //		"ListEdit(" +  
 		
-		toString(awtEvent); 
+		toString(awtEvent, globalId); 
 //		")";
 	}
 	
