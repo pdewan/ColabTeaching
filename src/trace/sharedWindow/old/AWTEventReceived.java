@@ -1,21 +1,21 @@
-package trace.replicatedWindows;
+package trace.sharedWindow.old;
 
 import java.awt.AWTEvent;
 
 import trace.echo.modular.OperationName;
 import util.session.CommunicatorSelector;
 
-public class AWTEventReceived extends CommunicatedAWTEventInfo{
+public class AWTEventReceived extends OldCommunicatedAWTEventInfo{
 
 	public AWTEventReceived(String aMessage, String aProcessName, AWTEvent anAWTEvent, String aGlobalId, String aDestinationOrSource, Object aFinder) {
 		super(aMessage, aProcessName, anAWTEvent, aGlobalId,  aDestinationOrSource, aFinder);
 	}
-	public AWTEventReceived(String aMessage, CommunicatedAWTEventInfo anInfo) {
+	public AWTEventReceived(String aMessage, OldCommunicatedAWTEventInfo anInfo) {
 		super(aMessage, anInfo);
 	}
 
 	public static AWTEventReceived toTraceable (String aMessage) {
-		CommunicatedAWTEventInfo anInfo = CommunicatedAWTEventInfo.toTraceable(aMessage);
+		OldCommunicatedAWTEventInfo anInfo = OldCommunicatedAWTEventInfo.toTraceable(aMessage);
 		return new AWTEventReceived(aMessage, anInfo);
 	}
 	public static AWTEventReceived newCase(

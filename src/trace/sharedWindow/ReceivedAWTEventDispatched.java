@@ -1,4 +1,4 @@
-package trace.replicatedWindows;
+package trace.sharedWindow;
 
 import java.awt.AWTEvent;
 

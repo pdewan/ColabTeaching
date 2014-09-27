@@ -1,4 +1,4 @@
-package trace.replicatedWindows;
+package trace.sharedWindow.old;
 import java.awt.AWTEvent;
 
 import trace.echo.ListEditInfo;
@@ -6,12 +6,12 @@ import trace.echo.modular.OperationName;
 import util.trace.session.AddressedMessageInfo;
 import util.trace.session.ProcessInfo;
 //public class CommunicatedListEditInfo extends ListEditInfo {
-public class CommunicatedAWTEventInfo extends AWTEventInfo {
+public class OldCommunicatedAWTEventInfo extends AWTEventInfo {
 
 	String destinationOrSource;
 	String processName;
 	
-	public CommunicatedAWTEventInfo(String aMessage,
+	public OldCommunicatedAWTEventInfo(String aMessage,
 			String aProcessName,
 			AWTEvent anAWTEvent, 
 			String aGlobalId,
@@ -24,23 +24,23 @@ public class CommunicatedAWTEventInfo extends AWTEventInfo {
 		processName = aProcessName;
 		destinationOrSource = aDestinationOrSource;
 	}
-	public CommunicatedAWTEventInfo(String aProcessName, AWTEvent anAWTEvent, String aGlobalId, String aDestinationOrSource) {
+	public OldCommunicatedAWTEventInfo(String aProcessName, AWTEvent anAWTEvent, String aGlobalId, String aDestinationOrSource) {
 		this("",  aProcessName, anAWTEvent, aGlobalId, aDestinationOrSource, null);		
 	}
-	public CommunicatedAWTEventInfo(String aMessage, String aProcessName, String aDestinationOrSource, AWTEventInfo anAWTEventInfo) {
+	public OldCommunicatedAWTEventInfo(String aMessage, String aProcessName, String aDestinationOrSource, AWTEventInfo anAWTEventInfo) {
 		super(aMessage, anAWTEventInfo);
 		processName = aProcessName;
 		destinationOrSource = aDestinationOrSource;
 	}
-	public CommunicatedAWTEventInfo(String aMessage, CommunicatedAWTEventInfo aCommunicatedAWTEventInfo) {
+	public OldCommunicatedAWTEventInfo(String aMessage, OldCommunicatedAWTEventInfo aCommunicatedAWTEventInfo) {
 		this(aMessage, aCommunicatedAWTEventInfo.getProcessName(), aCommunicatedAWTEventInfo.getDestinationOrSource(), aCommunicatedAWTEventInfo);
 	}
 
-	public static CommunicatedAWTEventInfo toTraceable (String aMessage) {
+	public static OldCommunicatedAWTEventInfo toTraceable (String aMessage) {
 		AWTEventInfo anAWTinfo = AWTEventInfo.toTraceable(aMessage);
 		String aProcessName = ProcessInfo.getProcessName(aMessage);
 		String anAddress = AddressedMessageInfo.getAddress(aMessage);		
-		return new CommunicatedAWTEventInfo(aMessage, aProcessName, anAddress, anAWTinfo);
+		return new OldCommunicatedAWTEventInfo(aMessage, aProcessName, anAddress, anAWTinfo);
 	}
 	
 	

@@ -1,19 +1,19 @@
-package trace.replicatedWindows;
+package trace.sharedWindow;
 
 import trace.echo.modular.EchoTracerSetter;
 import util.trace.Tracer;
 import util.trace.session.ReceivedMessageDistributedToListeners;
 import util.trace.session.SendDataRequest;
 
-public class ReplicatedWindowTracerSetter extends EchoTracerSetter{
+public class SharedWindowTracerSetter extends EchoTracerSetter{
 	
 	public static void traceReplicatedWindow() {
 		EchoTracerSetter.setTraceParameters();
 
-		setReplicatedWindowPrintStatus();		
+		setSharedWindowPrintStatus();		
 	}
 	
-	public static void setReplicatedWindowPrintStatus() {
+	public static void setSharedWindowPrintStatus() {
 		Tracer.setKeywordPrintStatus(ComponentTreeRegistered.class, true);		
 		Tracer.setKeywordPrintStatus(AWTEventSent.class, true);
 //		Tracer.setKeywordPrintStatus(AWTEventReceived.class, true);

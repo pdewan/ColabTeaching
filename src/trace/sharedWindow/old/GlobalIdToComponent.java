@@ -1,20 +1,20 @@
-package trace.replicatedWindows;
+package trace.sharedWindow.old;
 
 import java.awt.AWTEvent;
 
 import trace.echo.modular.OperationName;
 
-public class GlobalIdToComponent extends CommunicatedAWTEventInfo{
+public class GlobalIdToComponent extends OldCommunicatedAWTEventInfo{
 
 	public GlobalIdToComponent(String aMessage, String aProcessName, AWTEvent anAWTEvent, String aGlobalId, String aDestinationOrSource, Object aFinder) {
 		super(aMessage, aProcessName, anAWTEvent, aGlobalId,  aDestinationOrSource, aFinder);
 	}
-	public GlobalIdToComponent(String aMessage, CommunicatedAWTEventInfo anInfo) {
+	public GlobalIdToComponent(String aMessage, OldCommunicatedAWTEventInfo anInfo) {
 		super(aMessage, anInfo);
 	}
 
 	public static GlobalIdToComponent toTraceable (String aMessage) {
-		CommunicatedAWTEventInfo anInfo = CommunicatedAWTEventInfo.toTraceable(aMessage);
+		OldCommunicatedAWTEventInfo anInfo = OldCommunicatedAWTEventInfo.toTraceable(aMessage);
 		return new GlobalIdToComponent(aMessage, anInfo);
 	}
 	public static GlobalIdToComponent newCase(
