@@ -14,7 +14,7 @@ public class LockTracerSetter extends EchoTracerSetter{
 	}
 	
 	public static void setLockPrintStatus() {
-		Tracer.setKeywordPrintStatus(MasterLockRequestReceived.class, true);		
+		Tracer.setKeywordPrintStatus(MasterLockGrantRequestReceived.class, true);		
 ;
 	}
 

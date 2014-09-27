@@ -6,29 +6,29 @@ import trace.echo.modular.OperationName;
 import trace.sharedWindow.CommunicatedAWTEventInfo;
 import util.session.CommunicatorSelector;
 
-public class MasterLockRequestGranted extends CommunicatedLockInfo{
+public class MasterLockGrantRequestReceived extends CommunicatedLockInfo{
 
-	public MasterLockRequestGranted(String aMessage, String aProcessName,   String aDestinationOrSource, Object aFinder) {
+	public MasterLockGrantRequestReceived(String aMessage, String aProcessName,   String aDestinationOrSource, Object aFinder) {
 		super(aMessage, aProcessName,  aDestinationOrSource, aFinder);
 	}
-	public MasterLockRequestGranted(String aMessage, CommunicatedLockInfo anInfo) {
+	public MasterLockGrantRequestReceived(String aMessage, CommunicatedLockInfo anInfo) {
 		super(aMessage, anInfo);
 	}
 
-	public static MasterLockRequestGranted toTraceable (String aMessage) {
+	public static MasterLockGrantRequestReceived toTraceable (String aMessage) {
 		CommunicatedLockInfo anInfo = CommunicatedLockInfo.toTraceable(aMessage);
-		return new MasterLockRequestGranted(aMessage, anInfo);
+		return new MasterLockGrantRequestReceived(aMessage, anInfo);
 	}
-	public static MasterLockRequestGranted newCase(
+	public static MasterLockGrantRequestReceived newCase(
 			String aProcessName,
 			 String aSourceOrDestination, Object aFinder) {
 			
 		String aMessage = toString(aProcessName,  aSourceOrDestination);
-		MasterLockRequestGranted retVal = new MasterLockRequestGranted(aMessage, aProcessName, aSourceOrDestination, aFinder);
+		MasterLockGrantRequestReceived retVal = new MasterLockGrantRequestReceived(aMessage, aProcessName, aSourceOrDestination, aFinder);
 		retVal.announce();
 		return retVal;
 	}
-	public static MasterLockRequestGranted newCase(
+	public static MasterLockGrantRequestReceived newCase(
 			 String aSourceOrDestination, Object aFinder) {
 		
 		return newCase(CommunicatorSelector.getProcessName(), aSourceOrDestination, aFinder);
