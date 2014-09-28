@@ -9,6 +9,7 @@ import im.aware.AnAwareIMComposerAndLauncher;
 import util.session.Communicator;
 import util.session.ReceivedMessageListener;
 import util.session.SessionMessageListener;
+import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 
 public class AnAccessControlledIMClientComposerAndLauncher extends AnIMClientComposerAndLauncher {	
@@ -21,13 +22,17 @@ public class AnAccessControlledIMClientComposerAndLauncher extends AnIMClientCom
 		return new AControlledReplicatedHistory<String>(communicator);
 	}	
 	public  void addAccessControl() {	
-		AccessController accessController = new AnAccessController(communicator);		
+		AccessController accessController = new AnAccessController(communicator);	
+		accessController.setOwner(AliceAccessControlledIM.USER_NAME);
+//		accessController.addAdministratorLocal(AliceAccessControlledIM.USER_NAME);
+//		accessController.addInputterLocal(AliceAccessControlledIM.USER_NAME);
 		ReceivedMessageListener accessReceiver = new AnAccessReceiver(communicator, accessController);
 		communicator.addReceivedMessageListener(accessReceiver);
 //		controlledReplicatedHistory().addVetoer(accessController);
 		controlledReplicatedHistory().addVetoableChangeListener(accessController);
 
-		ObjectEditor.edit(accessController);
+		OEFrame aFrame = ObjectEditor.edit(accessController);
+		aFrame.setTitle(communicator.getClientName() + " Access Controller");
 
 	}	
 	protected ControlledReplicatedHistory<String> controlledReplicatedHistory() {

@@ -1,19 +1,9 @@
-package trace.locking;
-import java.awt.AWTEvent;
-import java.awt.Component;
-import java.util.Arrays;
-import java.util.List;
-
-import trace.echo.modular.OperationName;
-import util.trace.Traceable;
-import util.trace.TraceableInfo;
-import util.trace.session.AddressedMessageInfo;
+package trace.control;
 import util.trace.session.CommunicatedInfo;
-import util.trace.session.ProcessInfo;
-public class CommunicatedLockInfo extends CommunicatedInfo {
+public class CommunicatedControlInfo extends CommunicatedInfo {
 
 
-	public CommunicatedLockInfo(String aMessage,
+	public CommunicatedControlInfo(String aMessage,
 			String aProcessName,
 			String aDestinationOrSource,
 			Object aFinder) {
@@ -25,11 +15,11 @@ public class CommunicatedLockInfo extends CommunicatedInfo {
 	
 	
 	
-	public CommunicatedLockInfo() {
+	public CommunicatedControlInfo() {
 		this("",   null); 
 		
 	}
-	public CommunicatedLockInfo(String aMessage, 
+	public CommunicatedControlInfo(String aMessage, 
 			
 			CommunicatedInfo aTraceable
 //			String aProcessName,			
@@ -43,11 +33,11 @@ public class CommunicatedLockInfo extends CommunicatedInfo {
 	}
 	
 	
-	public static CommunicatedLockInfo toTraceable (String aMessage) {
+	public static CommunicatedControlInfo toTraceable (String aMessage) {
 		CommunicatedInfo aTraceable = CommunicatedInfo.toTraceable(aMessage);
 		
 		
-		return new CommunicatedLockInfo(aMessage, aTraceable);
+		return new CommunicatedControlInfo(aMessage, aTraceable);
 				
 	}
 	

@@ -1,9 +1,9 @@
 package trace.locking;
 
+import trace.access.InputRightRequested;
+import trace.control.UserActionDenied;
 import trace.echo.modular.EchoTracerSetter;
 import util.trace.Tracer;
-import util.trace.session.ReceivedMessageDistributedToListeners;
-import util.trace.session.SendDataRequest;
 
 public class LockTracerSetter extends EchoTracerSetter{
 	
@@ -14,7 +14,7 @@ public class LockTracerSetter extends EchoTracerSetter{
 	}
 	
 	public static void setLockPrintStatus() {
-		Tracer.setKeywordPrintStatus(MasterLockGrantRequestReceived.class, true);	
+		Tracer.setKeywordPrintStatus(InputRightRequested.class, true);	
 		Tracer.setKeywordPrintStatus(MasterLockGranted.class, true);
 		Tracer.setKeywordPrintStatus(MasterLockReleased.class, true);	
 		Tracer.setKeywordPrintStatus(MasterLockReleaseRequestReceived.class, true);	
@@ -26,7 +26,7 @@ public class LockTracerSetter extends EchoTracerSetter{
 		Tracer.setKeywordPrintStatus(SlaveLockRequestGranted.class, true);
 		Tracer.setKeywordPrintStatus(SlaveMyLockGrantMadeReceived.class, true);
 		Tracer.setKeywordPrintStatus(SlaveMyLockGrantRequestReceived.class, true);
-		Tracer.setKeywordPrintStatus(UserActionVetoed.class, true);
+		Tracer.setKeywordPrintStatus(UserActionDenied.class, true);
 	}
 
 }

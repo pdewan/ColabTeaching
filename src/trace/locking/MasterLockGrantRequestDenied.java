@@ -1,22 +1,19 @@
 package trace.locking;
 
-import java.awt.AWTEvent;
-
-import trace.echo.modular.OperationName;
+import trace.control.CommunicatedControlInfo;
 import util.session.CommunicatorSelector;
-import util.trace.awt.CommunicatedAWTEventInfo;
 
-public class MasterLockGrantRequestDenied extends CommunicatedLockInfo{
+public class MasterLockGrantRequestDenied extends CommunicatedControlInfo{
 
 	public MasterLockGrantRequestDenied(String aMessage, String aProcessName,   String aDestinationOrSource, Object aFinder) {
 		super(aMessage, aProcessName,  aDestinationOrSource, aFinder);
 	}
-	public MasterLockGrantRequestDenied(String aMessage, CommunicatedLockInfo anInfo) {
+	public MasterLockGrantRequestDenied(String aMessage, CommunicatedControlInfo anInfo) {
 		super(aMessage, anInfo);
 	}
 
 	public static MasterLockGrantRequestDenied toTraceable (String aMessage) {
-		CommunicatedLockInfo anInfo = CommunicatedLockInfo.toTraceable(aMessage);
+		CommunicatedControlInfo anInfo = CommunicatedControlInfo.toTraceable(aMessage);
 		return new MasterLockGrantRequestDenied(aMessage, anInfo);
 	}
 	public static MasterLockGrantRequestDenied newCase(

@@ -1,31 +1,31 @@
-package trace.locking;
+package trace.access;
 
 import trace.control.CommunicatedControlInfo;
 import util.session.CommunicatorSelector;
 
-public class MasterLockReleased extends CommunicatedControlInfo{
+public class AdministerRightGiven extends CommunicatedControlInfo{
 
-	public MasterLockReleased(String aMessage, String aProcessName,   String aDestinationOrSource, Object aFinder) {
+	public AdministerRightGiven(String aMessage, String aProcessName,   String aDestinationOrSource, Object aFinder) {
 		super(aMessage, aProcessName,  aDestinationOrSource, aFinder);
 	}
-	public MasterLockReleased(String aMessage, CommunicatedControlInfo anInfo) {
+	public AdministerRightGiven(String aMessage, CommunicatedControlInfo anInfo) {
 		super(aMessage, anInfo);
 	}
 
-	public static MasterLockReleased toTraceable (String aMessage) {
+	public static AdministerRightGiven toTraceable (String aMessage) {
 		CommunicatedControlInfo anInfo = CommunicatedControlInfo.toTraceable(aMessage);
-		return new MasterLockReleased(aMessage, anInfo);
+		return new AdministerRightGiven(aMessage, anInfo);
 	}
-	public static MasterLockReleased newCase(
+	public static AdministerRightGiven newCase(
 			String aProcessName,
 			 String aSourceOrDestination, Object aFinder) {
 			
 		String aMessage = toString(aProcessName,  aSourceOrDestination);
-		MasterLockReleased retVal = new MasterLockReleased(aMessage, aProcessName, aSourceOrDestination, aFinder);
+		AdministerRightGiven retVal = new AdministerRightGiven(aMessage, aProcessName, aSourceOrDestination, aFinder);
 		retVal.announce();
 		return retVal;
 	}
-	public static MasterLockReleased newCase(
+	public static AdministerRightGiven newCase(
 			 String aSourceOrDestination, Object aFinder) {
 		
 		return newCase(CommunicatorSelector.getProcessName(), aSourceOrDestination, aFinder);

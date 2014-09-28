@@ -1,31 +1,31 @@
-package trace.locking;
+package trace.access;
 
 import trace.control.CommunicatedControlInfo;
 import util.session.CommunicatorSelector;
 
-public class MasterLockReleased extends CommunicatedControlInfo{
+public class InputRightRequested extends CommunicatedControlInfo{
 
-	public MasterLockReleased(String aMessage, String aProcessName,   String aDestinationOrSource, Object aFinder) {
+	public InputRightRequested(String aMessage, String aProcessName,   String aDestinationOrSource, Object aFinder) {
 		super(aMessage, aProcessName,  aDestinationOrSource, aFinder);
 	}
-	public MasterLockReleased(String aMessage, CommunicatedControlInfo anInfo) {
+	public InputRightRequested(String aMessage, CommunicatedControlInfo anInfo) {
 		super(aMessage, anInfo);
 	}
 
-	public static MasterLockReleased toTraceable (String aMessage) {
+	public static InputRightRequested toTraceable (String aMessage) {
 		CommunicatedControlInfo anInfo = CommunicatedControlInfo.toTraceable(aMessage);
-		return new MasterLockReleased(aMessage, anInfo);
+		return new InputRightRequested(aMessage, anInfo);
 	}
-	public static MasterLockReleased newCase(
+	public static InputRightRequested newCase(
 			String aProcessName,
 			 String aSourceOrDestination, Object aFinder) {
 			
 		String aMessage = toString(aProcessName,  aSourceOrDestination);
-		MasterLockReleased retVal = new MasterLockReleased(aMessage, aProcessName, aSourceOrDestination, aFinder);
+		InputRightRequested retVal = new InputRightRequested(aMessage, aProcessName, aSourceOrDestination, aFinder);
 		retVal.announce();
 		return retVal;
 	}
-	public static MasterLockReleased newCase(
+	public static InputRightRequested newCase(
 			 String aSourceOrDestination, Object aFinder) {
 		
 		return newCase(CommunicatorSelector.getProcessName(), aSourceOrDestination, aFinder);

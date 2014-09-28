@@ -1,22 +1,19 @@
 package trace.locking;
 
-import java.awt.AWTEvent;
-
-import trace.echo.modular.OperationName;
+import trace.control.CommunicatedControlInfo;
 import util.session.CommunicatorSelector;
-import util.trace.awt.CommunicatedAWTEventInfo;
 
-public class SlaveLockGrantMadeReceived extends CommunicatedLockInfo{
+public class SlaveLockGrantMadeReceived extends CommunicatedControlInfo{
 
 	public SlaveLockGrantMadeReceived(String aMessage, String aProcessName,   String aDestinationOrSource, Object aFinder) {
 		super(aMessage, aProcessName,  aDestinationOrSource, aFinder);
 	}
-	public SlaveLockGrantMadeReceived(String aMessage, CommunicatedLockInfo anInfo) {
+	public SlaveLockGrantMadeReceived(String aMessage, CommunicatedControlInfo anInfo) {
 		super(aMessage, anInfo);
 	}
 
 	public static SlaveLockGrantMadeReceived toTraceable (String aMessage) {
-		CommunicatedLockInfo anInfo = CommunicatedLockInfo.toTraceable(aMessage);
+		CommunicatedControlInfo anInfo = CommunicatedControlInfo.toTraceable(aMessage);
 		return new SlaveLockGrantMadeReceived(aMessage, anInfo);
 	}
 	public static SlaveLockGrantMadeReceived newCase(

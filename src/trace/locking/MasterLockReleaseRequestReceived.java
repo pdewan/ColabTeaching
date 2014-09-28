@@ -1,22 +1,19 @@
 package trace.locking;
 
-import java.awt.AWTEvent;
-
-import trace.echo.modular.OperationName;
+import trace.control.CommunicatedControlInfo;
 import util.session.CommunicatorSelector;
-import util.trace.awt.CommunicatedAWTEventInfo;
 
-public class MasterLockReleaseRequestReceived extends CommunicatedLockInfo{
+public class MasterLockReleaseRequestReceived extends CommunicatedControlInfo{
 
 	public MasterLockReleaseRequestReceived(String aMessage, String aProcessName,   String aDestinationOrSource, Object aFinder) {
 		super(aMessage, aProcessName,  aDestinationOrSource, aFinder);
 	}
-	public MasterLockReleaseRequestReceived(String aMessage, CommunicatedLockInfo anInfo) {
+	public MasterLockReleaseRequestReceived(String aMessage, CommunicatedControlInfo anInfo) {
 		super(aMessage, anInfo);
 	}
 
 	public static MasterLockReleaseRequestReceived toTraceable (String aMessage) {
-		CommunicatedLockInfo anInfo = CommunicatedLockInfo.toTraceable(aMessage);
+		CommunicatedControlInfo anInfo = CommunicatedControlInfo.toTraceable(aMessage);
 		return new MasterLockReleaseRequestReceived(aMessage, anInfo);
 	}
 	public static MasterLockReleaseRequestReceived newCase(
