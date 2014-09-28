@@ -3,8 +3,8 @@ package trace.locking;
 import java.awt.AWTEvent;
 
 import trace.echo.modular.OperationName;
-import trace.sharedWindow.CommunicatedAWTEventInfo;
 import util.session.CommunicatorSelector;
+import util.trace.awt.CommunicatedAWTEventInfo;
 
 public class MasterLockReleased extends CommunicatedLockInfo{
 

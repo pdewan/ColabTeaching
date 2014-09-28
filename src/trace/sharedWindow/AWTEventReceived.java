@@ -2,8 +2,8 @@ package trace.sharedWindow;
 
 import java.awt.AWTEvent;
 
-import trace.echo.modular.OperationName;
 import util.session.CommunicatorSelector;
+import util.trace.awt.CommunicatedAWTEventInfo;
 
 public class AWTEventReceived extends CommunicatedAWTEventInfo{
 
@@ -29,7 +29,7 @@ public class AWTEventReceived extends CommunicatedAWTEventInfo{
 	}
 public static AWTEventReceived newCase(
 			
-			AWTEvent anAWTEvent, String aGlobalId, String aSourceOrDestination, Object aFinder) {
+			AWTEvent anAWTEvent, String aGlobalId,  String aSourceOrDestination, Object aFinder) {
 			
 		return AWTEventReceived.newCase(CommunicatorSelector.getProcessName(), anAWTEvent, aGlobalId, aSourceOrDestination, aFinder);
 	}

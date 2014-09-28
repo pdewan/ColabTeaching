@@ -4,6 +4,7 @@ import java.awt.AWTEvent;
 
 import trace.echo.modular.OperationName;
 import util.session.CommunicatorSelector;
+import util.trace.awt.CommunicatedAWTEventInfo;
 
 public class ComponentTreeRegistered extends CommunicatedAWTEventInfo{
 

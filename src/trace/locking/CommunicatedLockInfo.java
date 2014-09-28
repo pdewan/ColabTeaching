@@ -5,10 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 
 import trace.echo.modular.OperationName;
-import trace.sharedWindow.CommunicatedInfo;
 import util.trace.Traceable;
 import util.trace.TraceableInfo;
 import util.trace.session.AddressedMessageInfo;
+import util.trace.session.CommunicatedInfo;
 import util.trace.session.ProcessInfo;
 public class CommunicatedLockInfo extends CommunicatedInfo {
 
