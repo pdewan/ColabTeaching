@@ -6,29 +6,29 @@ import trace.echo.modular.OperationName;
 import trace.sharedWindow.CommunicatedAWTEventInfo;
 import util.session.CommunicatorSelector;
 
-public class MasterLockRequestDenied extends CommunicatedLockInfo{
+public class SlaveLockGrantRequestReceived extends CommunicatedLockInfo{
 
-	public MasterLockRequestDenied(String aMessage, String aProcessName,   String aDestinationOrSource, Object aFinder) {
+	public SlaveLockGrantRequestReceived(String aMessage, String aProcessName,   String aDestinationOrSource, Object aFinder) {
 		super(aMessage, aProcessName,  aDestinationOrSource, aFinder);
 	}
-	public MasterLockRequestDenied(String aMessage, CommunicatedLockInfo anInfo) {
+	public SlaveLockGrantRequestReceived(String aMessage, CommunicatedLockInfo anInfo) {
 		super(aMessage, anInfo);
 	}
 
-	public static MasterLockRequestDenied toTraceable (String aMessage) {
+	public static SlaveLockGrantRequestReceived toTraceable (String aMessage) {
 		CommunicatedLockInfo anInfo = CommunicatedLockInfo.toTraceable(aMessage);
-		return new MasterLockRequestDenied(aMessage, anInfo);
+		return new SlaveLockGrantRequestReceived(aMessage, anInfo);
 	}
-	public static MasterLockRequestDenied newCase(
+	public static SlaveLockGrantRequestReceived newCase(
 			String aProcessName,
 			 String aSourceOrDestination, Object aFinder) {
 			
 		String aMessage = toString(aProcessName,  aSourceOrDestination);
-		MasterLockRequestDenied retVal = new MasterLockRequestDenied(aMessage, aProcessName, aSourceOrDestination, aFinder);
+		SlaveLockGrantRequestReceived retVal = new SlaveLockGrantRequestReceived(aMessage, aProcessName, aSourceOrDestination, aFinder);
 		retVal.announce();
 		return retVal;
 	}
-	public static MasterLockRequestDenied newCase(
+	public static SlaveLockGrantRequestReceived newCase(
 			 String aSourceOrDestination, Object aFinder) {
 		
 		return newCase(CommunicatorSelector.getProcessName(), aSourceOrDestination, aFinder);

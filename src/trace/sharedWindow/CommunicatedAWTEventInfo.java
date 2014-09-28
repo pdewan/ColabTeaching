@@ -136,6 +136,7 @@ public class CommunicatedAWTEventInfo extends CommunicatedInfo {
 		if (anAWTEvent.getSource() instanceof Component) {
 			aName = ((Component) anAWTEvent.getSource()).getName();
 		}
+		try {
 		return toString(System.currentTimeMillis()) +
 				" " + AWT_EVENT +  ("(") + 
 				aName
@@ -147,6 +148,10 @@ public class CommunicatedAWTEventInfo extends CommunicatedInfo {
 				
 								
 			+ ")";
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "";
+		}
 		
 						
 	}

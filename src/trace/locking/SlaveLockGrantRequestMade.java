@@ -6,29 +6,29 @@ import trace.echo.modular.OperationName;
 import trace.sharedWindow.CommunicatedAWTEventInfo;
 import util.session.CommunicatorSelector;
 
-public class SlaveLockRequestDenied extends CommunicatedLockInfo{
+public class SlaveLockGrantRequestMade extends CommunicatedLockInfo{
 
-	public SlaveLockRequestDenied(String aMessage, String aProcessName,   String aDestinationOrSource, Object aFinder) {
+	public SlaveLockGrantRequestMade(String aMessage, String aProcessName,   String aDestinationOrSource, Object aFinder) {
 		super(aMessage, aProcessName,  aDestinationOrSource, aFinder);
 	}
-	public SlaveLockRequestDenied(String aMessage, CommunicatedLockInfo anInfo) {
+	public SlaveLockGrantRequestMade(String aMessage, CommunicatedLockInfo anInfo) {
 		super(aMessage, anInfo);
 	}
 
-	public static SlaveLockRequestDenied toTraceable (String aMessage) {
+	public static SlaveLockGrantRequestMade toTraceable (String aMessage) {
 		CommunicatedLockInfo anInfo = CommunicatedLockInfo.toTraceable(aMessage);
-		return new SlaveLockRequestDenied(aMessage, anInfo);
+		return new SlaveLockGrantRequestMade(aMessage, anInfo);
 	}
-	public static SlaveLockRequestDenied newCase(
+	public static SlaveLockGrantRequestMade newCase(
 			String aProcessName,
 			  Object aFinder) {
 			
 		String aMessage = toString(aProcessName,  null);
-		SlaveLockRequestDenied retVal = new SlaveLockRequestDenied(aMessage, aProcessName, null, aFinder);
+		SlaveLockGrantRequestMade retVal = new SlaveLockGrantRequestMade(aMessage, aProcessName, null, aFinder);
 		retVal.announce();
 		return retVal;
 	}
-	public static SlaveLockRequestDenied newCase(
+	public static SlaveLockGrantRequestMade newCase(
 			 Object aFinder) {
 		
 		return newCase(CommunicatorSelector.getProcessName(),  aFinder);

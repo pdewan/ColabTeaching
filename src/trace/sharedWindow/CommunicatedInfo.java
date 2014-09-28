@@ -50,8 +50,10 @@ public class CommunicatedInfo extends TraceableInfo {
 	
 	public static String toString(String aProcessName,  String aDestinationOrSource) {
 		return ProcessInfo.toString(aProcessName)  + 
-//				" Address(" + 
-				" " + AddressedMessageInfo.ADDRESS + "(" +
+//				" Address(" +
+				((aDestinationOrSource == null)?"": (
+				" " + AddressedMessageInfo.ADDRESS)) +
+				"(" +
 				aDestinationOrSource + ")";
 	}
 	public String alternativeToString() {

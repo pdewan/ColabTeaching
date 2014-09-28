@@ -7,7 +7,7 @@ import util.trace.session.SendDataRequest;
 
 public class SharedWindowTracerSetter extends EchoTracerSetter{
 	
-	public static void traceReplicatedWindow() {
+	public static void traceSharedWindow() {
 		EchoTracerSetter.setTraceParameters();
 
 		setSharedWindowPrintStatus();		
