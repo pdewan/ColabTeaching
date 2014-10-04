@@ -12,10 +12,16 @@ import trace.echo.modular.OperationName;
 import util.annotations.Tags;
 import util.tags.ApplicationTags;
 import util.tags.InteractiveTags;
+import util.trace.ImplicitKeywordKind;
+import util.trace.Tracer;
 @Tags({ApplicationTags.ECHOER})
 public class MonolithicEchoer  {	
 	protected static List<String> history = new ArrayList();
 	public static void main(String[] anArgs) {
+		Tracer.showInfo(true);
+		Tracer.setImplicitPrintKeywordKind(ImplicitKeywordKind.OBJECT_CLASS_NAME);
+		Tracer.setKeywordPrintStatus(MonolithicEchoer.class, true);
+
 		for (;;) {
 			System.out.println(PROMPT);
 			Scanner scanner = new Scanner(System.in);
