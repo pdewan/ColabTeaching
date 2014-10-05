@@ -1,20 +1,30 @@
+I***Tracer: showInfo = true
 Please enter an input line or quit or history
 I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(Please enter an input line or quit or history)
 $ The woods are lovely dark and deep
 I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(The woods are lovely dark and deep)
+I***EvtSrc(MonolithicEchoer) Time(1412453965773, 16:19:25) Thread(main) ListEdit_ADD(0,The woods are lovely dark and deep,History)
+I***EvtSrc(MonolithicEchoer) Time(1412453965897, 16:19:25) Thread(main) ListEdit_ADD(1,The woods are lovely dark and deep,History)
 The woods are lovely dark and deep
 I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(The woods are lovely dark and deep)
+I***EvtSrc(MonolithicEchoer) Time(1412453965898, 16:19:25) Thread(main) ListEdit_ADD(1,The woods are lovely dark and deep,History)
 Please enter an input line or quit or history
 I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(Please enter an input line or quit or history)
 $ But I have promises to keep
 I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(But I have promises to keep)
+I***EvtSrc(MonolithicEchoer) Time(1412453970340, 16:19:30) Thread(main) ListEdit_ADD(1,But I have promises to keep,History)
+I***EvtSrc(MonolithicEchoer) Time(1412453970341, 16:19:30) Thread(main) ListEdit_ADD(2,But I have promises to keep,History)
 But I have promises to keep
 I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(But I have promises to keep)
+I***EvtSrc(MonolithicEchoer) Time(1412453970341, 16:19:30) Thread(main) ListEdit_ADD(2,But I have promises to keep,History)
 Please enter an input line or quit or history
 I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(Please enter an input line or quit or history)
 $ And miles to go before I sleep
 I***EvtType(util.trace.console.ConsoleInput)  Thread(main) Input(And miles to go before I sleep)
+I***EvtSrc(MonolithicEchoer) Time(1412453971392, 16:19:31) Thread(main) ListEdit_ADD(2,And miles to go before I sleep,History)
+I***EvtSrc(MonolithicEchoer) Time(1412453971392, 16:19:31) Thread(main) ListEdit_ADD(3,And miles to go before I sleep,History)
 And miles to go before I sleep
 I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(And miles to go before I sleep)
+I***EvtSrc(MonolithicEchoer) Time(1412453971393, 16:19:31) Thread(main) ListEdit_ADD(3,And miles to go before I sleep,History)
 Please enter an input line or quit or history
 I***EvtType(util.trace.console.ConsoleOutput)  Thread(EchoerOutput) Output(Please enter an input line or quit or history)
