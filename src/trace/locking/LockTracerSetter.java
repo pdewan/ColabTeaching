@@ -21,7 +21,6 @@ public class LockTracerSetter extends EchoTracerSetter{
 		Tracer.setKeywordPrintStatus(MasterLockReleased.class, true);	
 		Tracer.setKeywordPrintStatus(MasterLockReleaseRequestReceived.class, true);	
 		Tracer.setKeywordPrintStatus(MasterLockReleaseStatusSent.class, true);
-
 		Tracer.setKeywordPrintStatus(SlaveLockGrantMadeReceived.class, true);
 		Tracer.setKeywordPrintStatus(SlaveLockGrantReceived.class, true);
 		Tracer.setKeywordPrintStatus(SlaveLockGrantRequestMade.class, true);
