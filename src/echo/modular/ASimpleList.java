@@ -93,6 +93,11 @@ public class ASimpleList<ElementType> implements SimpleList<ElementType> {
 	public void addObserver(ListObserver<ElementType> anObserver) {
 		observers.add(anObserver);
 	}
+	
+	@Override
+	public void removeObserver(ListObserver<ElementType> anObserver) {
+		observers.remove(anObserver);
+	}
 
 	public void notifyRemove(List<ListObserver<ElementType>> observers, int index, ElementType newValue) {
 		ListEditNotified.newCase(OperationName.DELETE, index, newValue, ApplicationTags.HISTORY, this);

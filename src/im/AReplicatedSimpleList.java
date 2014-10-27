@@ -5,6 +5,7 @@ import java.util.List;
 
 import trace.echo.modular.OperationName;
 import trace.im.ListEditSent;
+import util.annotations.Visible;
 import util.session.Communicator;
 import util.tags.ApplicationTags;
 import util.trace.Tracer;
@@ -19,6 +20,7 @@ public class AReplicatedSimpleList<ElementType> extends ASimpleList<ElementType>
 	public AReplicatedSimpleList(Communicator theCommunicator) {
 		communicator = theCommunicator;
 	}
+	
 	public synchronized void replicatedAdd(ElementType anElement) {
 		int anIndex = size();
 		super.observableAdd(anIndex, anElement);
@@ -39,6 +41,16 @@ public class AReplicatedSimpleList<ElementType> extends ASimpleList<ElementType>
 
 
 
+	}
+	@Override
+	
+	public Communicator getCommunicator() {
+		return communicator;
+	}
+	@Override
+	
+	public void setCommunicator(Communicator communicator) {
+		this.communicator = communicator;
 	}
 	public void notifyReplicatingObservers(int index, ElementType newValue) {
 //		ListEditNotified.newCase(OperationName.ADD, index, newValue, ApplicationTags.IM, this);

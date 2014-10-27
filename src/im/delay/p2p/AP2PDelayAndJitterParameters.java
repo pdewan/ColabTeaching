@@ -9,6 +9,8 @@ import util.session.Communicator;
 import bus.uigen.ObjectEditor;
 
 public class AP2PDelayAndJitterParameters extends AJitterParameters implements P2PDelayAndJitterParameters{
+	boolean isRelayed;
+	
 	int minimumDelayToPeer;
 //	int delayVariation;
 //	protected Communicator communicator;
@@ -69,6 +71,15 @@ public class AP2PDelayAndJitterParameters extends AJitterParameters implements P
 	@Column(1)
 	public void noDelay() {
 		setMinimumDelayToPeer(0);
+	}
+	@Row(4)
+	public boolean isRelayed() {
+		return communicator.getMessageSenderRunnable().isRelayedMode();
+		
+	}
+	public void setRelayed(boolean newVal) {
+		this.isRelayed = isRelayed;
+		communicator.getMessageSenderRunnable().setRelayedMode(newVal);
 	}
 	public static void main (String[] anArgs) {
 	}

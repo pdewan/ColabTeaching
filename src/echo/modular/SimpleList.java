@@ -13,5 +13,6 @@ public interface SimpleList<ElementType> {
 	ElementType remove(int anIndex);
 	boolean remove(ElementType anElement);
 	boolean observableRemove(ElementType anElement);
+	void removeObserver(ListObserver<ElementType> anObserver);
 		
 }
