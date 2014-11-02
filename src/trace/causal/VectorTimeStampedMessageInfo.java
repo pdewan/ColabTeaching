@@ -1,52 +1,57 @@
 package trace.causal;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import trace.echo.ListEditInfo;
 import util.trace.TraceableInfo;
 import util.trace.session.ProcessInfo;
 
 public class VectorTimeStampedMessageInfo extends ProcessInfo {
-	UserOTTimeStampInfo otTimeStamp;
-	ListEditInfo listEdit;
+	VectorTimeStampInfo vectorTimeStamp;
+	long messageTimeStamp;
+	public static final String REAL_TS = "RealTS";
 //	String processName;
 	public VectorTimeStampedMessageInfo(String aMessage, String aProcessName,
-			ListEditInfo aListEdit, UserOTTimeStampInfo anOTTimeStamp,
+			long along, VectorTimeStampInfo aVectorTimeStamp,
 			Object aFinder) {
 		super(aMessage, aProcessName,  aFinder);
 //		processName = aProcessName;
-		otTimeStamp = anOTTimeStamp;
-		listEdit = aListEdit;
+		vectorTimeStamp = aVectorTimeStamp;
+		messageTimeStamp = along;
 	}
 	
-	public VectorTimeStampedMessageInfo(ListEditInfo aListEdit, 
-			UserOTTimeStampInfo anOTTimeStamp) {
-		this("", "", aListEdit, anOTTimeStamp, null);
+	public VectorTimeStampedMessageInfo(long along, 
+			VectorTimeStampInfo aVectorTimeStamp) {
+		this("", "", along, aVectorTimeStamp, null);
 	}
 
-	public VectorTimeStampedMessageInfo(String aMessage, ListEditInfo aListEdit, 
-			UserOTTimeStampInfo anOTTimeStamp, ProcessInfo aProcessInfo) {
+	public VectorTimeStampedMessageInfo(String aMessage, long along, 
+			VectorTimeStampInfo aVectorTimeStamp, ProcessInfo aProcessInfo) {
 //		super(aMessage, "", aProcessInfo);
 		super(aMessage, aProcessInfo);
 
-		otTimeStamp = anOTTimeStamp;
-		listEdit = aListEdit;
+		vectorTimeStamp = aVectorTimeStamp;
+		messageTimeStamp = along;
 	}
 
-	public VectorTimeStampedMessageInfo(String aMessage, VectorTimeStampedMessageInfo anOTListEdit) {
-		this (aMessage, anOTListEdit.getListEdit(), anOTListEdit.getUserOTTimeStamp(), anOTListEdit);
+	public VectorTimeStampedMessageInfo(String aMessage, VectorTimeStampedMessageInfo aVectorTimeStampedMessage) {
+		this (aMessage, aVectorTimeStampedMessage.getMessageTimeStamp(), aVectorTimeStampedMessage.getVectorTimeStamp(), aVectorTimeStampedMessage);
 		
 	}
-	public static String toLocalInfoToString(String aProcessName, ListEditInfo aListEdit,
-			UserOTTimeStampInfo anOTTimeStamp) {
-		return aListEdit.toLocalInfoToString() + " "
-				+ anOTTimeStamp.alternativeToString() ;
+	public static String toLocalInfoToString(String aProcessName, long along,
+			VectorTimeStampInfo aVectorTimeStamp) {
+		return REAL_TS + "(" + along+  ")" + " "
+				+ aVectorTimeStamp.alternativeToString() ;
 		
 	}
-	public static String toString(String aProcessName, ListEditInfo aListEdit,
-			UserOTTimeStampInfo anOTTimeStamp) {
-		return toString(aProcessName) + " " + toLocalInfoToString(aProcessName, aListEdit, anOTTimeStamp);
+	public static String toString(String aProcessName, long along,
+			VectorTimeStampInfo aVectorTimeStamp) {
+		return toString(aProcessName) + " " + toLocalInfoToString(aProcessName, along, aVectorTimeStamp);
 //				"OTEdit(" + 
-//				aListEdit.toLocalInfoToString() + " "
-//				+ anOTTimeStamp.alternativeToString() ;
+//				along.toLocalInfoToString() + " "
+//				+ aVectorTimeStamp.alternativeToString() ;
 				
 //				+ ")";
 
@@ -60,27 +65,29 @@ public class VectorTimeStampedMessageInfo extends ProcessInfo {
 //			System.out.println(e);
 //			aProcessInfo = null;
 //		}
-		ListEditInfo aListEditInfo = ListEditInfo.toTraceable(aMessage);
-		UserOTTimeStampInfo aTimeStampInfo = UserOTTimeStampInfo.toTraceable(aMessage);
-		return new VectorTimeStampedMessageInfo(aMessage, aListEditInfo, aTimeStampInfo, aProcessInfo);
+//		long along = long.toTraceable(aMessage);
+		long aLong =   Long.parseLong(getArgs(aMessage, REAL_TS).get(0));
+		Map<String, Integer> retVal = new HashMap();
+		VectorTimeStampInfo aTimeStampInfo = VectorTimeStampInfo.toTraceable(aMessage);
+		return new VectorTimeStampedMessageInfo(aMessage, aLong, aTimeStampInfo, aProcessInfo);
 		
 	}
 	
 
 	public String alternativeToString() {
-		return toString(processName, listEdit, otTimeStamp);
+		return toString(processName, messageTimeStamp, vectorTimeStamp);
 	}
 	public String toLocalInfoToString() {
-		return toLocalInfoToString(processName, listEdit, otTimeStamp);
+		return toLocalInfoToString(processName, messageTimeStamp, vectorTimeStamp);
 	}
 
 
-	public UserOTTimeStampInfo getUserOTTimeStamp() {
-		return otTimeStamp;
+	public VectorTimeStampInfo getVectorTimeStamp() {
+		return vectorTimeStamp;
 	}
 
-	public ListEditInfo getListEdit() {
-		return listEdit;
+	public long getMessageTimeStamp() {
+		return messageTimeStamp;
 	}
 	
 	public String getProcessName() {
