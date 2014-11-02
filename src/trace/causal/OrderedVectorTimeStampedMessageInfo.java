@@ -14,22 +14,23 @@ public class OrderedVectorTimeStampedMessageInfo extends VectorTimeStampedMessag
 	public static final String POS = "Pos";
 //	String processName;
 	public OrderedVectorTimeStampedMessageInfo(String aMessage, String aProcessName,
-			int aPos, long aLong, VectorTimeStampInfo aVectorTimeStamp,
+			Map<String, Integer> aVectorTimeStamp,
+			int aPos, long aLong, 
 			Object aFinder) {
-		super(aMessage, aProcessName, aLong, aVectorTimeStamp, aFinder);
+		super(aMessage, aProcessName, aVectorTimeStamp,  aLong,  aFinder);
 //		processName = aProcessName;
 		pos = aPos;
 	}
 	
 	public OrderedVectorTimeStampedMessageInfo(int aPos, long aLong,
-			VectorTimeStampInfo aVectorTimeStamp) {
-		this("", "", aPos, aLong,  aVectorTimeStamp, null);
+			Map<String, Integer> aVectorTimeStamp) {
+		this("", "", aVectorTimeStamp,aPos, aLong,   null);
 	}
 
-	public OrderedVectorTimeStampedMessageInfo(String aMessage, int aPos, long aLong,
-			VectorTimeStampInfo aVectorTimeStamp, ProcessInfo aProcessInfo) {
+	public OrderedVectorTimeStampedMessageInfo(String aMessage, Map<String, Integer> aVectorTimeStamp, int aPos, long aLong,
+			 ProcessInfo aProcessInfo) {
 //		super(aMessage, "", aProcessInfo);
-		super(aMessage, aLong, aVectorTimeStamp, aProcessInfo);
+		super(aMessage,  aVectorTimeStamp, aLong, aProcessInfo);
 
 		pos = aPos;
 	}
@@ -39,13 +40,13 @@ public class OrderedVectorTimeStampedMessageInfo extends VectorTimeStampedMessag
 //		
 //	}
 	public static String toLocalInfoToString(String aProcessName, int aPos, long aTS,
-			VectorTimeStampInfo aVectorTimeStampedMessage) {
+			Map<String, Integer> aVectorTimeStampedMessage) {
 		return POS + "(" + aPos+  ")" + " " + toLocalInfoToString (aProcessName, aTS, aVectorTimeStampedMessage);
 //				+ aVectorTimeStampedMessage.alternativeToString() ;
 		
 	}
-	public static String toString(String aProcessName, int aPos,
-			long aLong, VectorTimeStampInfo aVectorTimeStamp) {
+	public static String toString(String aProcessName, Map<String, Integer> aVectorTimeStamp,
+			int aPos, long aLong) {
 		return toString(aProcessName) + " " + toLocalInfoToString(aProcessName, aPos, aLong, aVectorTimeStamp);
 //				"OTEdit(" + 
 //				aPos.toLocalInfoToString() + " "
@@ -66,17 +67,17 @@ public class OrderedVectorTimeStampedMessageInfo extends VectorTimeStampedMessag
 //		long aPos = long.toTraceable(aMessage);
 		int aPos =   Integer.parseInt(getArgs(aMessage, POS).get(0));
 		VectorTimeStampedMessageInfo aMessageInfo = VectorTimeStampedMessageInfo.toTraceable(aMessage);
-		return new OrderedVectorTimeStampedMessageInfo(aMessage, aPos, aMessageInfo.getMessageTimeStamp(), aMessageInfo.getVectorTimeStamp(),
+		return new OrderedVectorTimeStampedMessageInfo(aMessage, aMessageInfo.getUserToCount(), aPos, aMessageInfo.getMessageTimeStamp(), 
 				aProcessInfo);
 		
 	}
 	
 
 	public String alternativeToString() {
-		return toString(processName, pos, messageTimeStamp, vectorTimeStamp);
+		return toString(processName, userToCount, pos, messageTimeStamp);
 	}
 	public String toLocalInfoToString() {
-		return toLocalInfoToString(processName, pos, messageTimeStamp, vectorTimeStamp);
+		return toLocalInfoToString(processName, pos, messageTimeStamp, userToCount);
 	}
 
 

@@ -1,49 +1,52 @@
 package trace.causal;
 
+import java.util.Map;
+
 import trace.locking.SlaveLockGrantRequestMade;
 import util.session.CommunicatorSelector;
-import util.session.SentMessage;
+import util.session.ReceivedMessage;
 import util.trace.session.ProcessInfo;
 
 public class VectorTimeStampedMessageReceived extends VectorTimeStampedMessageInfo{
 
 //	public VectorTimeStampedMessageBuffered(String aMessage, String aProcess, int aPos, long aLong,
-//			VectorTimeStampInfo aVectorTimeStamp, Object aFinder) {
+//			Map<String, Integer> aVectorTimeStamp, Object aFinder) {
 //		super(aMessage, aProcess, aPos, aLong, aVectorTimeStamp, aFinder);
 //		// TODO Auto-generated constructor stub
 //	}
 
 	public VectorTimeStampedMessageReceived(String aMessage, 
-			long aLong, VectorTimeStampInfo aVectorTimeStamp,
+			long aLong, Map<String, Integer> aVectorTimeStamp,
 			ProcessInfo aProcessInfo) {
-		super(aMessage,  aLong, aVectorTimeStamp, aProcessInfo);
+		super(aMessage,   aVectorTimeStamp, aLong, aProcessInfo);
 		// TODO Auto-generated constructor stub
 	}
 
 	public VectorTimeStampedMessageReceived(String aMessage,
-			String aProcessName,  long aLong,
-			VectorTimeStampInfo aVectorTimeStamp, Object aFinder) {
-		super(aMessage, aProcessName,  aLong, aVectorTimeStamp, aFinder);
+			String aProcessName,  
+			Map<String, Integer> aVectorTimeStamp, long aLong,Object aFinder) {
+		super(aMessage, aProcessName,   aVectorTimeStamp, aLong, aFinder);
 		// TODO Auto-generated constructor stub
 	}
 	public static VectorTimeStampedMessageReceived newCase(
 			String aProcessName,
-			SentMessage aSentMessage,
-			VectorTimeStampInfo aVectorTimeStamp,
+			ReceivedMessage aReceivedMessage,
+			Map<String, Integer> aVectorTimeStamp,
 			  Object aFinder) {
 			
-		String aMessage = toString(aProcessName,  aSentMessage.getTimeStamp(), aVectorTimeStamp);
-		VectorTimeStampedMessageReceived retVal = new VectorTimeStampedMessageReceived(aMessage, aProcessName,  aSentMessage.getTimeStamp(), aVectorTimeStamp, aFinder);
+		String aMessage = toString(aProcessName,  aReceivedMessage.getTimeStamp(), aVectorTimeStamp);
+		VectorTimeStampedMessageReceived retVal = new VectorTimeStampedMessageReceived(aMessage, aProcessName, 
+				aVectorTimeStamp, aReceivedMessage.getTimeStamp(),  aFinder);
 		retVal.announce();
 		return retVal;
 	}
 	public static VectorTimeStampedMessageReceived newCase(
 			
-			SentMessage aSentMessage,
-			VectorTimeStampInfo aVectorTimeStamp,
+			ReceivedMessage aReceivedMessage,
+			Map<String, Integer> aVectorTimeStamp,
 			  Object aFinder) {
 		
-		return newCase(CommunicatorSelector.getProcessName(),  aSentMessage, aVectorTimeStamp, aFinder);
+		return newCase(CommunicatorSelector.getProcessName(),  aReceivedMessage, aVectorTimeStamp, aFinder);
 			
 		
 	}
