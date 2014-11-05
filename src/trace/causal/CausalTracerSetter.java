@@ -7,13 +7,13 @@ import util.trace.Tracer;
 
 public class CausalTracerSetter extends EchoTracerSetter{
 	
-	public static void traceLock() {
+	public static void traceCausal() {
 		EchoTracerSetter.setTraceParameters();
 
-		setLockPrintStatus();		
+		setCausalPrintStatus();		
 	}
 	
-	public static void setLockPrintStatus() {
+	public static void setCausalPrintStatus() {
 		Tracer.setKeywordPrintStatus(ConcurrentVectorTimeStampedMessageDetected.class, true);		
 		Tracer.setKeywordPrintStatus(LocalCountIncrementedInSiteVectorTimeStamp.class, true);
 		Tracer.setKeywordPrintStatus(RemoteCountIncrementedInSiteVectorTimeStamp.class, true);
