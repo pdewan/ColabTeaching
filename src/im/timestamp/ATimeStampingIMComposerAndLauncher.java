@@ -16,7 +16,7 @@ public class ATimeStampingIMComposerAndLauncher extends
 		MessageFilterCreator<ReceivedMessage> receivedMessageQueuerCreator = new ADeTimeStampingReceivedMessageFilterCreator();
 		MessageFilterCreator<SentMessage> sentMessageQueuerCreator = new ATimeStampingSentMessageFilterCreator();
 		ReceivedMessageFilterSelector
-				.setMessageFilterFactory(receivedMessageQueuerCreator);
+				.setMessageFilterCreator(receivedMessageQueuerCreator);
 		SentMessageFilterSelector
 				.setMessageFilterCreator(sentMessageQueuerCreator);
 		// create communicator
