@@ -18,7 +18,7 @@ public class CausalTracerSetter extends EchoTracerSetter{
 		Tracer.setKeywordPrintStatus(LocalCountIncrementedInSiteVectorTimeStamp.class, true);
 		Tracer.setKeywordPrintStatus(RemoteCountIncrementedInSiteVectorTimeStamp.class, true);
 		Tracer.setKeywordPrintStatus(UserAddedToVectorTimeStamp.class, true);
-		Tracer.setKeywordPrintStatus(VectorTimeStampCopiedAndNewBufferCreatedInResponseToConcurrentMessage.class, true);
+		Tracer.setKeywordPrintStatus(VectorTimeStampCopiedAndNewBufferCreated.class, true);
 		Tracer.setKeywordPrintStatus(VectorTimeStampCreated.class, true);
 		Tracer.setKeywordPrintStatus(VectorTimeStampedMessageBuffered.class, true);
 		Tracer.setKeywordPrintStatus(VectorTimeStampedMessageDelivered.class, true);
