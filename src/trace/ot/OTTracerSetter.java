@@ -4,9 +4,9 @@ import trace.echo.modular.EchoTracerSetter;
 import trace.im.IMTracerSetter;
 import util.trace.Tracer;
 
-public class OTIMTracerSetter extends IMTracerSetter {
+public class OTTracerSetter extends IMTracerSetter {
 	
-	public static void traceOTIM() {
+	public static void traceOT() {
 //		Tracer.showInfo(true);
 		EchoTracerSetter.setTraceParameters();
 		setOTPrintStatus();		
@@ -14,17 +14,17 @@ public class OTIMTracerSetter extends IMTracerSetter {
 	
 	public static void setOTPrintStatus() {
 //		SessionTracerSetter.setSessionPrintStatus();
-		IMTracerSetter.setIMPrintStatus();
-		Tracer.setKeywordPrintStatus(ConcurrentEdits.class, true);
+//		IMTracerSetter.setIMPrintStatus();
+//		Tracer.setKeywordPrintStatus(ConcurrentEdits.class, true);
 		Tracer.setKeywordPrintStatus(InitialOTTimeStampCreated.class, true);
 		Tracer.setKeywordPrintStatus(LocalSiteCountIncremented.class, true);
 		Tracer.setKeywordPrintStatus(OTListEditBuffered.class, true);
-		Tracer.setKeywordPrintStatus(OTListEditCopied.class, true);
+//		Tracer.setKeywordPrintStatus(OTListEditCopied.class, true);
 		Tracer.setKeywordPrintStatus(OTListEditFlipped.class, true);
 		Tracer.setKeywordPrintStatus(OTListEditReceived.class, true);
 		Tracer.setKeywordPrintStatus(OTListEditRemoteCountIncremented.class, true);
 		Tracer.setKeywordPrintStatus(OTListEditSent.class, true);
-		Tracer.setKeywordPrintStatus(TransformationOperands.class, true);
+//		Tracer.setKeywordPrintStatus(TransformationOperands.class, true);
 		Tracer.setKeywordPrintStatus(TransformationResult.class, true);
 
 
