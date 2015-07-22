@@ -3,10 +3,10 @@ package im.access;
 import java.beans.VetoableChangeListener;
 import java.util.List;
 
-import util.models.PropertyListenerRegistrar;
+import util.models.PropertyListenerRegisterer;
 import util.models.Vetoer;
 
-public interface AccessController extends VetoableChangeListener, PropertyListenerRegistrar {
+public interface AccessController extends VetoableChangeListener, PropertyListenerRegisterer {
 	boolean canInput(String theUser);
 	boolean canAdminister(String theUser);
 	void addAdministrator(String newAdminsitrator);
